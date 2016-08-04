@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/t_ite.jpg" style="display: none;" id="img1"/>
+		<canvas id="myCanvas" style=""></canvas>
+		<script type="text/javascript">
+		window.onload=function(){
+			
+		var c=document.getElementById('myCanvas');
+		var ctx=c.getContext('2d');
+		var img1=document.getElementById('img1');
+		ctx.drawImage(img1,10,10,150,150);
+		}
+		</script>
+	</body>
+</html>

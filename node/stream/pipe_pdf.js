@@ -1,0 +1,2 @@
+var fs=require('fs');
+fs.createReadStream('1.pdf').pipe(fs.createWriteStream('1-pipi.pdf'))

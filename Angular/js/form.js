@@ -1,0 +1,22 @@
+var userInfoModule=angular.module('userInfoModule',[]);
+userInfoModule.controller('userInfoCtrl',function($scope){
+	$scope.userInfo={
+		email:'qq@qq.com',
+		password:'qqqqqq',
+		autoLogin:true
+	};
+	$scope.getFormInfo=function(){
+		console.log($scope.userInfo);
+	};
+	$scope.setFormInfo=function(){
+		$scope.userInfo={
+			email:'admin@admin.com',
+			password:'admin',
+			autoLogin:false
+		};
+	};
+	$scope.changeColor=function(){
+	$scope.au=!$scope.au;
+	}
+	$scope.au=true;
+});

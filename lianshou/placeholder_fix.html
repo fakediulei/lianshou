@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+.placeholder{color: gray;}
+</style>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	
+	<form action="#">
+		<input type="text" placeholder="姓名" /><br />		
+		<input type="text" placeholder="年龄" />
+	</form>
+<!--[if lte IE 9]> 
+	
+<script type="text/javascript">
+$(function(){
+	$('form input[placeholder]').focus(function(){
+		var input=$(this);
+		if(input.val()==input.attr('placeholder')){
+			input.val('').removeClass('placeholder');
+		}
+	}).blur(function(){
+		var input=$(this);
+		if(input.val()==''){
+			input.val(input.attr('placeholder')).addClass('placeholder');
+		}
+	}).blur();
+});
+</script>	
+<![endif]-->	
+
+</body>
+</html>

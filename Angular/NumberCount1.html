@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		table,.div2{width: 600px;margin: 0 auto;}
+			input{width: 40px;}
+			.red{    color: #f00;}
+			table{font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;}
+	th{
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;}
+	tr{    border: 1px solid #666;}
+			button{    margin: 15px;}
+		</style>
+	</head>
+	<body ng-app='myApp' ng-controller="myCtrl">	
+		<table>
+			<tr><th colspan="2">1</th></tr>
+			<tr><td>
+					<input type="text" ng-model='a1[0]'/>
+					<input type="text" ng-model='a1[1]'/>
+					<input type="text" ng-model='a1[2]'/>
+					<input type="text" ng-model='a1[3]'/>
+					<input type="text" ng-model='a1[4]'/>
+					<input type="text" ng-model='a1[5]'/>
+					<input type="text" ng-model='a1[6]'/>
+					<input type="text" ng-model='a1[7]'/>
+					<input type="text" ng-model='a1[8]'/>
+					<input type="text" ng-model='a1[9]'/>
+					<input type="text" ng-model='a1[10]'/>
+					<input type="text" ng-model='a1[11]'/>
+					<input type="text" ng-model='a1[12]'/>
+					<input type="text" ng-model='a1[13]'/>
+					<input type="text" ng-model='a1[14]'/>
+					<input type="text" ng-model='a1[15]'/>
+					<input type="text" ng-model='a1[16]'/>
+					<input type="text" ng-model='a1[17]'/>
+					<input type="text" ng-model='a1[18]'/>
+					<input type="text" ng-model='a1[19]'/>
+					<input type="text" ng-model='a1[20]'/>
+					<input type="text" ng-model='a1[21]'/>
+					<input type="text" ng-model='a1[22]'/>
+					<input type="text" ng-model='a1[23]'/>
+					<input type="text" ng-model='a1[24]'/>
+					<input type="text" ng-model='a1[25]'/>
+					<input type="text" ng-model='a1[26]'/>
+					<input type="text" ng-model='a1[27]'/>
+					<input type="text" ng-model='a1[28]'/>
+					<input type="text" ng-model='a1[29]'/>
+				</td>
+				<td class="red">总和：{{s1}}</td></tr>
+			<tr><th colspan="2">2</th></tr>	
+			<tr>
+				<td>
+					<input type="text" ng-model='a2[0]'/>
+					<input type="text" ng-model='a2[1]'/>
+					<input type="text" ng-model='a2[2]'/>
+					<input type="text" ng-model='a2[3]'/>
+					<input type="text" ng-model='a2[4]'/>
+					<input type="text" ng-model='a2[5]'/>
+					<input type="text" ng-model='a2[6]'/>
+					<input type="text" ng-model='a2[7]'/>
+					<input type="text" ng-model='a2[8]'/>
+					<input type="text" ng-model='a2[9]'/>
+					<input type="text" ng-model='a2[10]'/>
+					<input type="text" ng-model='a2[11]'/>
+					<input type="text" ng-model='a2[12]'/>
+					<input type="text" ng-model='a2[13]'/>
+					<input type="text" ng-model='a2[14]'/>
+					<input type="text" ng-model='a2[15]'/>
+					<input type="text" ng-model='a2[16]'/>
+					<input type="text" ng-model='a2[17]'/>
+					<input type="text" ng-model='a2[18]'/>
+					<input type="text" ng-model='a2[19]'/>
+					<input type="text" ng-model='a2[20]'/>
+					<input type="text" ng-model='a2[21]'/>
+					<input type="text" ng-model='a2[22]'/>
+					<input type="text" ng-model='a2[23]'/>
+					<input type="text" ng-model='a2[24]'/>
+					<input type="text" ng-model='a2[25]'/>
+					<input type="text" ng-model='a2[26]'/>
+					<input type="text" ng-model='a2[27]'/>
+					<input type="text" ng-model='a2[28]'/>
+					<input type="text" ng-model='a2[29]'/>
+				</td>
+				<td class="red">总和：{{s2}}</td>
+			</tr>
+			<tr><th colspan="2">3</th></tr>
+			<tr><td>
+					<input type="text" ng-model='a3[0]'/>
+					<input type="text" ng-model='a3[1]'/>
+					<input type="text" ng-model='a3[2]'/>
+					<input type="text" ng-model='a3[3]'/>
+					<input type="text" ng-model='a3[4]'/>
+					<input type="text" ng-model='a3[5]'/>
+					<input type="text" ng-model='a3[6]'/>
+					<input type="text" ng-model='a3[7]'/>
+					<input type="text" ng-model='a3[8]'/>
+					<input type="text" ng-model='a3[9]'/>
+					<input type="text" ng-model='a3[10]'/>
+					<input type="text" ng-model='a3[11]'/>
+					<input type="text" ng-model='a3[12]'/>
+					<input type="text" ng-model='a3[13]'/>
+					<input type="text" ng-model='a3[14]'/>
+					<input type="text" ng-model='a3[15]'/>
+					<input type="text" ng-model='a3[16]'/>
+					<input type="text" ng-model='a3[17]'/>
+					<input type="text" ng-model='a3[18]'/>
+					<input type="text" ng-model='a3[19]'/>
+					<input type="text" ng-model='a3[20]'/>
+					<input type="text" ng-model='a3[21]'/>
+					<input type="text" ng-model='a3[22]'/>
+					<input type="text" ng-model='a3[23]'/>
+					<input type="text" ng-model='a3[24]'/>
+					<input type="text" ng-model='a3[25]'/>
+					<input type="text" ng-model='a3[26]'/>
+					<input type="text" ng-model='a3[27]'/>
+					<input type="text" ng-model='a3[28]'/>
+					<input type="text" ng-model='a3[29]'/>
+				</td>
+				<td class="red">总和：{{s3}}</td>
+			</tr>
+			<tr><th colspan="2">4</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a4[0]'/>
+					<input type="text" ng-model='a4[1]'/>
+					<input type="text" ng-model='a4[2]'/>
+					<input type="text" ng-model='a4[3]'/>
+					<input type="text" ng-model='a4[4]'/>
+					<input type="text" ng-model='a4[5]'/>
+					<input type="text" ng-model='a4[6]'/>
+					<input type="text" ng-model='a4[7]'/>
+					<input type="text" ng-model='a4[8]'/>
+					<input type="text" ng-model='a4[9]'/>
+					<input type="text" ng-model='a4[10]'/>
+					<input type="text" ng-model='a4[11]'/>
+					<input type="text" ng-model='a4[12]'/>
+					<input type="text" ng-model='a4[13]'/>
+					<input type="text" ng-model='a4[14]'/>
+					<input type="text" ng-model='a4[15]'/>
+					<input type="text" ng-model='a4[16]'/>
+					<input type="text" ng-model='a4[17]'/>
+					<input type="text" ng-model='a4[18]'/>
+					<input type="text" ng-model='a4[19]'/>
+					<input type="text" ng-model='a4[20]'/>
+					<input type="text" ng-model='a4[21]'/>
+					<input type="text" ng-model='a4[22]'/>
+					<input type="text" ng-model='a4[23]'/>
+					<input type="text" ng-model='a4[24]'/>
+					<input type="text" ng-model='a4[25]'/>
+					<input type="text" ng-model='a4[26]'/>
+					<input type="text" ng-model='a4[27]'/>
+					<input type="text" ng-model='a4[28]'/>
+					<input type="text" ng-model='a4[29]'/>
+				</td>
+				<td class="red">总和：{{s4}}</td>
+			</tr>
+			<tr><th colspan="2">5</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a5[0]'/>
+					<input type="text" ng-model='a5[1]'/>
+					<input type="text" ng-model='a5[2]'/>
+					<input type="text" ng-model='a5[3]'/>
+					<input type="text" ng-model='a5[4]'/>
+					<input type="text" ng-model='a5[5]'/>
+					<input type="text" ng-model='a5[6]'/>
+					<input type="text" ng-model='a5[7]'/>
+					<input type="text" ng-model='a5[8]'/>
+					<input type="text" ng-model='a5[9]'/>
+					<input type="text" ng-model='a5[10]'/>
+					<input type="text" ng-model='a5[11]'/>
+					<input type="text" ng-model='a5[12]'/>
+					<input type="text" ng-model='a5[13]'/>
+					<input type="text" ng-model='a5[14]'/>
+					<input type="text" ng-model='a5[15]'/>
+					<input type="text" ng-model='a5[16]'/>
+					<input type="text" ng-model='a5[17]'/>
+					<input type="text" ng-model='a5[18]'/>
+					<input type="text" ng-model='a5[19]'/>
+					<input type="text" ng-model='a5[20]'/>
+					<input type="text" ng-model='a5[21]'/>
+					<input type="text" ng-model='a5[22]'/>
+					<input type="text" ng-model='a5[23]'/>
+					<input type="text" ng-model='a5[24]'/>
+					<input type="text" ng-model='a5[25]'/>
+					<input type="text" ng-model='a5[26]'/>
+					<input type="text" ng-model='a5[27]'/>
+					<input type="text" ng-model='a5[28]'/>
+					<input type="text" ng-model='a5[29]'/>
+				</td>
+				<td class="red">总和:{{s5}}</td>
+			</tr>
+			<tr><th colspan="2">6</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a6[0]'/>
+					<input type="text" ng-model='a6[1]'/>
+					<input type="text" ng-model='a6[2]'/>
+					<input type="text" ng-model='a6[3]'/>
+					<input type="text" ng-model='a6[4]'/>
+					<input type="text" ng-model='a6[5]'/>
+					<input type="text" ng-model='a6[6]'/>
+					<input type="text" ng-model='a6[7]'/>
+					<input type="text" ng-model='a6[8]'/>
+					<input type="text" ng-model='a6[9]'/>
+					<input type="text" ng-model='a6[10]'/>
+					<input type="text" ng-model='a6[11]'/>
+					<input type="text" ng-model='a6[12]'/>
+					<input type="text" ng-model='a6[13]'/>
+					<input type="text" ng-model='a6[14]'/>
+					<input type="text" ng-model='a6[15]'/>
+					<input type="text" ng-model='a6[16]'/>
+					<input type="text" ng-model='a6[17]'/>
+					<input type="text" ng-model='a6[18]'/>
+					<input type="text" ng-model='a6[19]'/>
+					<input type="text" ng-model='a6[20]'/>
+					<input type="text" ng-model='a6[21]'/>
+					<input type="text" ng-model='a6[22]'/>
+					<input type="text" ng-model='a6[23]'/>
+					<input type="text" ng-model='a6[24]'/>
+					<input type="text" ng-model='a6[25]'/>
+					<input type="text" ng-model='a6[26]'/>
+					<input type="text" ng-model='a6[27]'/>
+					<input type="text" ng-model='a6[28]'/>
+					<input type="text" ng-model='a6[29]'/>
+				</td>
+				<td class="red">总和:{{s6}}</td>
+			</tr>
+			<tr><th colspan="2">7</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a7[0]'/>
+					<input type="text" ng-model='a7[1]'/>
+					<input type="text" ng-model='a7[2]'/>
+					<input type="text" ng-model='a7[3]'/>
+					<input type="text" ng-model='a7[4]'/>
+					<input type="text" ng-model='a7[5]'/>
+					<input type="text" ng-model='a7[6]'/>
+					<input type="text" ng-model='a7[7]'/>
+					<input type="text" ng-model='a7[8]'/>
+					<input type="text" ng-model='a7[9]'/>
+					<input type="text" ng-model='a7[10]'/>
+					<input type="text" ng-model='a7[11]'/>
+					<input type="text" ng-model='a7[12]'/>
+					<input type="text" ng-model='a7[13]'/>
+					<input type="text" ng-model='a7[14]'/>
+					<input type="text" ng-model='a7[15]'/>
+					<input type="text" ng-model='a7[16]'/>
+					<input type="text" ng-model='a7[17]'/>
+					<input type="text" ng-model='a7[18]'/>
+					<input type="text" ng-model='a7[19]'/>
+					<input type="text" ng-model='a7[20]'/>
+					<input type="text" ng-model='a7[21]'/>
+					<input type="text" ng-model='a7[22]'/>
+					<input type="text" ng-model='a7[23]'/>
+					<input type="text" ng-model='a7[24]'/>
+					<input type="text" ng-model='a7[25]'/>
+					<input type="text" ng-model='a7[26]'/>
+					<input type="text" ng-model='a7[27]'/>
+					<input type="text" ng-model='a7[28]'/>
+					<input type="text" ng-model='a7[29]'/>
+				</td>
+				<td class="red">总和:{{s7}}</td>
+			</tr>
+			<tr><th colspan="2">8</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a8[0]'/>
+					<input type="text" ng-model='a8[1]'/>
+					<input type="text" ng-model='a8[2]'/>
+					<input type="text" ng-model='a8[3]'/>
+					<input type="text" ng-model='a8[4]'/>
+					<input type="text" ng-model='a8[5]'/>
+					<input type="text" ng-model='a8[6]'/>
+					<input type="text" ng-model='a8[7]'/>
+					<input type="text" ng-model='a8[8]'/>
+					<input type="text" ng-model='a8[9]'/>
+					<input type="text" ng-model='a8[10]'/>
+					<input type="text" ng-model='a8[11]'/>
+					<input type="text" ng-model='a8[12]'/>
+					<input type="text" ng-model='a8[13]'/>
+					<input type="text" ng-model='a8[14]'/>
+					<input type="text" ng-model='a8[15]'/>
+					<input type="text" ng-model='a8[16]'/>
+					<input type="text" ng-model='a8[17]'/>
+					<input type="text" ng-model='a8[18]'/>
+					<input type="text" ng-model='a8[19]'/>
+					<input type="text" ng-model='a8[20]'/>
+					<input type="text" ng-model='a8[21]'/>
+					<input type="text" ng-model='a8[22]'/>
+					<input type="text" ng-model='a8[23]'/>
+					<input type="text" ng-model='a8[24]'/>
+					<input type="text" ng-model='a8[25]'/>
+					<input type="text" ng-model='a8[26]'/>
+					<input type="text" ng-model='a8[27]'/>
+					<input type="text" ng-model='a8[28]'/>
+					<input type="text" ng-model='a8[29]'/>
+				</td>
+				<td class="red">总和:{{s8}}</td>
+			</tr>
+			<tr><th colspan="2">9</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a9[0]'/>
+					<input type="text" ng-model='a9[1]'/>
+					<input type="text" ng-model='a9[2]'/>
+					<input type="text" ng-model='a9[3]'/>
+					<input type="text" ng-model='a9[4]'/>
+					<input type="text" ng-model='a9[5]'/>
+					<input type="text" ng-model='a9[6]'/>
+					<input type="text" ng-model='a9[7]'/>
+					<input type="text" ng-model='a9[8]'/>
+					<input type="text" ng-model='a9[9]'/>
+					<input type="text" ng-model='a9[10]'/>
+					<input type="text" ng-model='a9[11]'/>
+					<input type="text" ng-model='a9[12]'/>
+					<input type="text" ng-model='a9[13]'/>
+					<input type="text" ng-model='a9[14]'/>
+					<input type="text" ng-model='a9[15]'/>
+					<input type="text" ng-model='a9[16]'/>
+					<input type="text" ng-model='a9[17]'/>
+					<input type="text" ng-model='a9[18]'/>
+					<input type="text" ng-model='a9[19]'/>
+					<input type="text" ng-model='a9[20]'/>
+					<input type="text" ng-model='a9[21]'/>
+					<input type="text" ng-model='a9[22]'/>
+					<input type="text" ng-model='a9[23]'/>
+					<input type="text" ng-model='a9[24]'/>
+					<input type="text" ng-model='a9[25]'/>
+					<input type="text" ng-model='a9[26]'/>
+					<input type="text" ng-model='a9[27]'/>
+					<input type="text" ng-model='a9[28]'/>
+					<input type="text" ng-model='a9[29]'/>
+				</td>
+				<td class="red">总和:{{s9}}</td>
+			</tr>
+			<tr><th colspan="2">10</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a10[0]'/>
+					<input type="text" ng-model='a10[1]'/>
+					<input type="text" ng-model='a10[2]'/>
+					<input type="text" ng-model='a10[3]'/>
+					<input type="text" ng-model='a10[4]'/>
+					<input type="text" ng-model='a10[5]'/>
+					<input type="text" ng-model='a10[6]'/>
+					<input type="text" ng-model='a10[7]'/>
+					<input type="text" ng-model='a10[8]'/>
+					<input type="text" ng-model='a10[9]'/>
+					<input type="text" ng-model='a10[10]'/>
+					<input type="text" ng-model='a10[11]'/>
+					<input type="text" ng-model='a10[12]'/>
+					<input type="text" ng-model='a10[13]'/>
+					<input type="text" ng-model='a10[14]'/>
+					<input type="text" ng-model='a10[15]'/>
+					<input type="text" ng-model='a10[16]'/>
+					<input type="text" ng-model='a10[17]'/>
+					<input type="text" ng-model='a10[18]'/>
+					<input type="text" ng-model='a10[19]'/>
+					<input type="text" ng-model='a10[20]'/>
+					<input type="text" ng-model='a10[21]'/>
+					<input type="text" ng-model='a10[22]'/>
+					<input type="text" ng-model='a10[23]'/>
+					<input type="text" ng-model='a10[24]'/>
+					<input type="text" ng-model='a10[25]'/>
+					<input type="text" ng-model='a10[26]'/>
+					<input type="text" ng-model='a10[27]'/>
+					<input type="text" ng-model='a10[28]'/>
+					<input type="text" ng-model='a10[29]'/>
+				</td>
+				<td class="red">总和:{{s10}}</td>
+			</tr>
+			<tr><th colspan="2">11</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a11[0]'/>
+					<input type="text" ng-model='a11[1]'/>
+					<input type="text" ng-model='a11[2]'/>
+					<input type="text" ng-model='a11[3]'/>
+					<input type="text" ng-model='a11[4]'/>
+					<input type="text" ng-model='a11[5]'/>
+					<input type="text" ng-model='a11[6]'/>
+					<input type="text" ng-model='a11[7]'/>
+					<input type="text" ng-model='a11[8]'/>
+					<input type="text" ng-model='a11[9]'/>
+					<input type="text" ng-model='a11[10]'/>
+					<input type="text" ng-model='a11[11]'/>
+					<input type="text" ng-model='a11[12]'/>
+					<input type="text" ng-model='a11[13]'/>
+					<input type="text" ng-model='a11[14]'/>
+					<input type="text" ng-model='a11[15]'/>
+					<input type="text" ng-model='a11[16]'/>
+					<input type="text" ng-model='a11[17]'/>
+					<input type="text" ng-model='a11[18]'/>
+					<input type="text" ng-model='a11[19]'/>
+					<input type="text" ng-model='a11[20]'/>
+					<input type="text" ng-model='a11[21]'/>
+					<input type="text" ng-model='a11[22]'/>
+					<input type="text" ng-model='a11[23]'/>
+					<input type="text" ng-model='a11[24]'/>
+					<input type="text" ng-model='a11[25]'/>
+					<input type="text" ng-model='a11[26]'/>
+					<input type="text" ng-model='a11[27]'/>
+					<input type="text" ng-model='a11[28]'/>
+					<input type="text" ng-model='a11[29]'/>
+				</td>
+				<td class="red">总和:{{s11}}</td>
+			</tr>
+			<tr><th colspan="2">12</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a12[0]'/>
+					<input type="text" ng-model='a12[1]'/>
+					<input type="text" ng-model='a12[2]'/>
+					<input type="text" ng-model='a12[3]'/>
+					<input type="text" ng-model='a12[4]'/>
+					<input type="text" ng-model='a12[5]'/>
+					<input type="text" ng-model='a12[6]'/>
+					<input type="text" ng-model='a12[7]'/>
+					<input type="text" ng-model='a12[8]'/>
+					<input type="text" ng-model='a12[9]'/>
+					<input type="text" ng-model='a12[10]'/>
+					<input type="text" ng-model='a12[11]'/>
+					<input type="text" ng-model='a12[12]'/>
+					<input type="text" ng-model='a12[13]'/>
+					<input type="text" ng-model='a12[14]'/>
+					<input type="text" ng-model='a12[15]'/>
+					<input type="text" ng-model='a12[16]'/>
+					<input type="text" ng-model='a12[17]'/>
+					<input type="text" ng-model='a12[18]'/>
+					<input type="text" ng-model='a12[19]'/>
+					<input type="text" ng-model='a12[20]'/>
+					<input type="text" ng-model='a12[21]'/>
+					<input type="text" ng-model='a12[22]'/>
+					<input type="text" ng-model='a12[23]'/>
+					<input type="text" ng-model='a12[24]'/>
+					<input type="text" ng-model='a12[25]'/>
+					<input type="text" ng-model='a12[26]'/>
+					<input type="text" ng-model='a12[27]'/>
+					<input type="text" ng-model='a12[28]'/>
+					<input type="text" ng-model='a12[29]'/>
+				</td>
+				<td class="red">总和:{{s12}}</td>
+			</tr>
+			<tr><th colspan="2">13</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a13[0]'/>
+					<input type="text" ng-model='a13[1]'/>
+					<input type="text" ng-model='a13[2]'/>
+					<input type="text" ng-model='a13[3]'/>
+					<input type="text" ng-model='a13[4]'/>
+					<input type="text" ng-model='a13[5]'/>
+					<input type="text" ng-model='a13[6]'/>
+					<input type="text" ng-model='a13[7]'/>
+					<input type="text" ng-model='a13[8]'/>
+					<input type="text" ng-model='a13[9]'/>
+					<input type="text" ng-model='a13[10]'/>
+					<input type="text" ng-model='a13[11]'/>
+					<input type="text" ng-model='a13[12]'/>
+					<input type="text" ng-model='a13[13]'/>
+					<input type="text" ng-model='a13[14]'/>
+					<input type="text" ng-model='a13[15]'/>
+					<input type="text" ng-model='a13[16]'/>
+					<input type="text" ng-model='a13[17]'/>
+					<input type="text" ng-model='a13[18]'/>
+					<input type="text" ng-model='a13[19]'/>
+					<input type="text" ng-model='a13[20]'/>
+					<input type="text" ng-model='a13[21]'/>
+					<input type="text" ng-model='a13[22]'/>
+					<input type="text" ng-model='a13[23]'/>
+					<input type="text" ng-model='a13[24]'/>
+					<input type="text" ng-model='a13[25]'/>
+					<input type="text" ng-model='a13[26]'/>
+					<input type="text" ng-model='a13[27]'/>
+					<input type="text" ng-model='a13[28]'/>
+					<input type="text" ng-model='a13[29]'/>
+				</td>
+				<td class="red">总和:{{s13}}</td>
+			</tr>
+			<tr><th colspan="2">14</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a14[0]'/>
+					<input type="text" ng-model='a14[1]'/>
+					<input type="text" ng-model='a14[2]'/>
+					<input type="text" ng-model='a14[3]'/>
+					<input type="text" ng-model='a14[4]'/>
+					<input type="text" ng-model='a14[5]'/>
+					<input type="text" ng-model='a14[6]'/>
+					<input type="text" ng-model='a14[7]'/>
+					<input type="text" ng-model='a14[8]'/>
+					<input type="text" ng-model='a14[9]'/>
+					<input type="text" ng-model='a14[10]'/>
+					<input type="text" ng-model='a14[11]'/>
+					<input type="text" ng-model='a14[12]'/>
+					<input type="text" ng-model='a14[13]'/>
+					<input type="text" ng-model='a14[14]'/>
+					<input type="text" ng-model='a14[15]'/>
+					<input type="text" ng-model='a14[16]'/>
+					<input type="text" ng-model='a14[17]'/>
+					<input type="text" ng-model='a14[18]'/>
+					<input type="text" ng-model='a14[19]'/>
+					<input type="text" ng-model='a14[20]'/>
+					<input type="text" ng-model='a14[21]'/>
+					<input type="text" ng-model='a14[22]'/>
+					<input type="text" ng-model='a14[23]'/>
+					<input type="text" ng-model='a14[24]'/>
+					<input type="text" ng-model='a14[25]'/>
+					<input type="text" ng-model='a14[26]'/>
+					<input type="text" ng-model='a14[27]'/>
+					<input type="text" ng-model='a14[28]'/>
+					<input type="text" ng-model='a14[29]'/>
+				</td>
+				<td class="red">总和:{{s14}}</td>
+			</tr>
+			<tr><th colspan="2">15</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a15[0]'/>
+					<input type="text" ng-model='a15[1]'/>
+					<input type="text" ng-model='a15[2]'/>
+					<input type="text" ng-model='a15[3]'/>
+					<input type="text" ng-model='a15[4]'/>
+					<input type="text" ng-model='a15[5]'/>
+					<input type="text" ng-model='a15[6]'/>
+					<input type="text" ng-model='a15[7]'/>
+					<input type="text" ng-model='a15[8]'/>
+					<input type="text" ng-model='a15[9]'/>
+					<input type="text" ng-model='a15[10]'/>
+					<input type="text" ng-model='a15[11]'/>
+					<input type="text" ng-model='a15[12]'/>
+					<input type="text" ng-model='a15[13]'/>
+					<input type="text" ng-model='a15[14]'/>
+					<input type="text" ng-model='a15[15]'/>
+					<input type="text" ng-model='a15[16]'/>
+					<input type="text" ng-model='a15[17]'/>
+					<input type="text" ng-model='a15[18]'/>
+					<input type="text" ng-model='a15[19]'/>
+					<input type="text" ng-model='a15[20]'/>
+					<input type="text" ng-model='a15[21]'/>
+					<input type="text" ng-model='a15[22]'/>
+					<input type="text" ng-model='a15[23]'/>
+					<input type="text" ng-model='a15[24]'/>
+					<input type="text" ng-model='a15[25]'/>
+					<input type="text" ng-model='a15[26]'/>
+					<input type="text" ng-model='a15[27]'/>
+					<input type="text" ng-model='a15[28]'/>
+					<input type="text" ng-model='a15[29]'/>
+				</td>
+				<td class="red">总和:{{s15}}</td>
+			</tr>
+			<tr><th colspan="2">16</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a16[0]'/>
+					<input type="text" ng-model='a16[1]'/>
+					<input type="text" ng-model='a16[2]'/>
+					<input type="text" ng-model='a16[3]'/>
+					<input type="text" ng-model='a16[4]'/>
+					<input type="text" ng-model='a16[5]'/>
+					<input type="text" ng-model='a16[6]'/>
+					<input type="text" ng-model='a16[7]'/>
+					<input type="text" ng-model='a16[8]'/>
+					<input type="text" ng-model='a16[9]'/>
+					<input type="text" ng-model='a16[10]'/>
+					<input type="text" ng-model='a16[11]'/>
+					<input type="text" ng-model='a16[12]'/>
+					<input type="text" ng-model='a16[13]'/>
+					<input type="text" ng-model='a16[14]'/>
+					<input type="text" ng-model='a16[15]'/>
+					<input type="text" ng-model='a16[16]'/>
+					<input type="text" ng-model='a16[17]'/>
+					<input type="text" ng-model='a16[18]'/>
+					<input type="text" ng-model='a16[19]'/>
+					<input type="text" ng-model='a16[20]'/>
+					<input type="text" ng-model='a16[21]'/>
+					<input type="text" ng-model='a16[22]'/>
+					<input type="text" ng-model='a16[23]'/>
+					<input type="text" ng-model='a16[24]'/>
+					<input type="text" ng-model='a16[25]'/>
+					<input type="text" ng-model='a16[26]'/>
+					<input type="text" ng-model='a16[27]'/>
+					<input type="text" ng-model='a16[28]'/>
+					<input type="text" ng-model='a16[29]'/>
+				</td>
+				<td class="red">总和:{{s16}}</td>
+			</tr>
+			<tr><th colspan="2">17</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a17[0]'/>
+					<input type="text" ng-model='a17[1]'/>
+					<input type="text" ng-model='a17[2]'/>
+					<input type="text" ng-model='a17[3]'/>
+					<input type="text" ng-model='a17[4]'/>
+					<input type="text" ng-model='a17[5]'/>
+					<input type="text" ng-model='a17[6]'/>
+					<input type="text" ng-model='a17[7]'/>
+					<input type="text" ng-model='a17[8]'/>
+					<input type="text" ng-model='a17[9]'/>
+					<input type="text" ng-model='a17[10]'/>
+					<input type="text" ng-model='a17[11]'/>
+					<input type="text" ng-model='a17[12]'/>
+					<input type="text" ng-model='a17[13]'/>
+					<input type="text" ng-model='a17[14]'/>
+					<input type="text" ng-model='a17[15]'/>
+					<input type="text" ng-model='a17[16]'/>
+					<input type="text" ng-model='a17[17]'/>
+					<input type="text" ng-model='a17[18]'/>
+					<input type="text" ng-model='a17[19]'/>
+					<input type="text" ng-model='a17[20]'/>
+					<input type="text" ng-model='a17[21]'/>
+					<input type="text" ng-model='a17[22]'/>
+					<input type="text" ng-model='a17[23]'/>
+					<input type="text" ng-model='a17[24]'/>
+					<input type="text" ng-model='a17[25]'/>
+					<input type="text" ng-model='a17[26]'/>
+					<input type="text" ng-model='a17[27]'/>
+					<input type="text" ng-model='a17[28]'/>
+					<input type="text" ng-model='a17[29]'/>
+				</td>
+				<td class="red">总和:{{s17}}</td>
+			</tr>
+			<tr><th colspan="2">18</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a18[0]'/>
+					<input type="text" ng-model='a18[1]'/>
+					<input type="text" ng-model='a18[2]'/>
+					<input type="text" ng-model='a18[3]'/>
+					<input type="text" ng-model='a18[4]'/>
+					<input type="text" ng-model='a18[5]'/>
+					<input type="text" ng-model='a18[6]'/>
+					<input type="text" ng-model='a18[7]'/>
+					<input type="text" ng-model='a18[8]'/>
+					<input type="text" ng-model='a18[9]'/>
+					<input type="text" ng-model='a18[10]'/>
+					<input type="text" ng-model='a18[11]'/>
+					<input type="text" ng-model='a18[12]'/>
+					<input type="text" ng-model='a18[13]'/>
+					<input type="text" ng-model='a18[14]'/>
+					<input type="text" ng-model='a18[15]'/>
+					<input type="text" ng-model='a18[16]'/>
+					<input type="text" ng-model='a18[17]'/>
+					<input type="text" ng-model='a18[18]'/>
+					<input type="text" ng-model='a18[19]'/>
+					<input type="text" ng-model='a18[20]'/>
+					<input type="text" ng-model='a18[21]'/>
+					<input type="text" ng-model='a18[22]'/>
+					<input type="text" ng-model='a18[23]'/>
+					<input type="text" ng-model='a18[24]'/>
+					<input type="text" ng-model='a18[25]'/>
+					<input type="text" ng-model='a18[26]'/>
+					<input type="text" ng-model='a18[27]'/>
+					<input type="text" ng-model='a18[28]'/>
+					<input type="text" ng-model='a18[29]'/>
+				</td>
+				<td class="red">总和:{{s18}}</td>
+			</tr>
+			<tr><th colspan="2">19</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a19[0]'/>
+					<input type="text" ng-model='a19[1]'/>
+					<input type="text" ng-model='a19[2]'/>
+					<input type="text" ng-model='a19[3]'/>
+					<input type="text" ng-model='a19[4]'/>
+					<input type="text" ng-model='a19[5]'/>
+					<input type="text" ng-model='a19[6]'/>
+					<input type="text" ng-model='a19[7]'/>
+					<input type="text" ng-model='a19[8]'/>
+					<input type="text" ng-model='a19[9]'/>
+					<input type="text" ng-model='a19[10]'/>
+					<input type="text" ng-model='a19[11]'/>
+					<input type="text" ng-model='a19[12]'/>
+					<input type="text" ng-model='a19[13]'/>
+					<input type="text" ng-model='a19[14]'/>
+					<input type="text" ng-model='a19[15]'/>
+					<input type="text" ng-model='a19[16]'/>
+					<input type="text" ng-model='a19[17]'/>
+					<input type="text" ng-model='a19[18]'/>
+					<input type="text" ng-model='a19[19]'/>
+					<input type="text" ng-model='a19[20]'/>
+					<input type="text" ng-model='a19[21]'/>
+					<input type="text" ng-model='a19[22]'/>
+					<input type="text" ng-model='a19[23]'/>
+					<input type="text" ng-model='a19[24]'/>
+					<input type="text" ng-model='a19[25]'/>
+					<input type="text" ng-model='a19[26]'/>
+					<input type="text" ng-model='a19[27]'/>
+					<input type="text" ng-model='a19[28]'/>
+					<input type="text" ng-model='a19[29]'/>
+				</td>
+				<td class="red">总和:{{s19}}</td>
+			</tr>
+			<tr><th colspan="2">20</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a20[0]'/>
+					<input type="text" ng-model='a20[1]'/>
+					<input type="text" ng-model='a20[2]'/>
+					<input type="text" ng-model='a20[3]'/>
+					<input type="text" ng-model='a20[4]'/>
+					<input type="text" ng-model='a20[5]'/>
+					<input type="text" ng-model='a20[6]'/>
+					<input type="text" ng-model='a20[7]'/>
+					<input type="text" ng-model='a20[8]'/>
+					<input type="text" ng-model='a20[9]'/>
+					<input type="text" ng-model='a20[10]'/>
+					<input type="text" ng-model='a20[11]'/>
+					<input type="text" ng-model='a20[12]'/>
+					<input type="text" ng-model='a20[13]'/>
+					<input type="text" ng-model='a20[14]'/>
+					<input type="text" ng-model='a20[15]'/>
+					<input type="text" ng-model='a20[16]'/>
+					<input type="text" ng-model='a20[17]'/>
+					<input type="text" ng-model='a20[18]'/>
+					<input type="text" ng-model='a20[19]'/>
+					<input type="text" ng-model='a20[20]'/>
+					<input type="text" ng-model='a20[21]'/>
+					<input type="text" ng-model='a20[22]'/>
+					<input type="text" ng-model='a20[23]'/>
+					<input type="text" ng-model='a20[24]'/>
+					<input type="text" ng-model='a20[25]'/>
+					<input type="text" ng-model='a20[26]'/>
+					<input type="text" ng-model='a20[27]'/>
+					<input type="text" ng-model='a20[28]'/>
+					<input type="text" ng-model='a20[29]'/>
+				</td>
+				<td class="red">总和:{{s20}}</td>
+			</tr>
+			<tr><th colspan="2">21</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a21[0]'/>
+					<input type="text" ng-model='a21[1]'/>
+					<input type="text" ng-model='a21[2]'/>
+					<input type="text" ng-model='a21[3]'/>
+					<input type="text" ng-model='a21[4]'/>
+					<input type="text" ng-model='a21[5]'/>
+					<input type="text" ng-model='a21[6]'/>
+					<input type="text" ng-model='a21[7]'/>
+					<input type="text" ng-model='a21[8]'/>
+					<input type="text" ng-model='a21[9]'/>
+					<input type="text" ng-model='a21[10]'/>
+					<input type="text" ng-model='a21[11]'/>
+					<input type="text" ng-model='a21[12]'/>
+					<input type="text" ng-model='a21[13]'/>
+					<input type="text" ng-model='a21[14]'/>
+					<input type="text" ng-model='a21[15]'/>
+					<input type="text" ng-model='a21[16]'/>
+					<input type="text" ng-model='a21[17]'/>
+					<input type="text" ng-model='a21[18]'/>
+					<input type="text" ng-model='a21[19]'/>
+					<input type="text" ng-model='a21[20]'/>
+					<input type="text" ng-model='a21[21]'/>
+					<input type="text" ng-model='a21[22]'/>
+					<input type="text" ng-model='a21[23]'/>
+					<input type="text" ng-model='a21[24]'/>
+					<input type="text" ng-model='a21[25]'/>
+					<input type="text" ng-model='a21[26]'/>
+					<input type="text" ng-model='a21[27]'/>
+					<input type="text" ng-model='a21[28]'/>
+					<input type="text" ng-model='a21[29]'/>
+				</td>
+				<td class="red">总和:{{s21}}</td>
+			</tr>
+			<tr><th colspan="2">22</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a22[0]'/>
+					<input type="text" ng-model='a22[1]'/>
+					<input type="text" ng-model='a22[2]'/>
+					<input type="text" ng-model='a22[3]'/>
+					<input type="text" ng-model='a22[4]'/>
+					<input type="text" ng-model='a22[5]'/>
+					<input type="text" ng-model='a22[6]'/>
+					<input type="text" ng-model='a22[7]'/>
+					<input type="text" ng-model='a22[8]'/>
+					<input type="text" ng-model='a22[9]'/>
+					<input type="text" ng-model='a22[10]'/>
+					<input type="text" ng-model='a22[11]'/>
+					<input type="text" ng-model='a22[12]'/>
+					<input type="text" ng-model='a22[13]'/>
+					<input type="text" ng-model='a22[14]'/>
+					<input type="text" ng-model='a22[15]'/>
+					<input type="text" ng-model='a22[16]'/>
+					<input type="text" ng-model='a22[17]'/>
+					<input type="text" ng-model='a22[18]'/>
+					<input type="text" ng-model='a22[19]'/>
+					<input type="text" ng-model='a22[20]'/>
+					<input type="text" ng-model='a22[21]'/>
+					<input type="text" ng-model='a22[22]'/>
+					<input type="text" ng-model='a22[23]'/>
+					<input type="text" ng-model='a22[24]'/>
+					<input type="text" ng-model='a22[25]'/>
+					<input type="text" ng-model='a22[26]'/>
+					<input type="text" ng-model='a22[27]'/>
+					<input type="text" ng-model='a22[28]'/>
+					<input type="text" ng-model='a22[29]'/>
+				</td>
+				<td class="red">总和:{{s22}}</td>
+			</tr>
+			<tr><th colspan="2">23</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a23[0]'/>
+					<input type="text" ng-model='a23[1]'/>
+					<input type="text" ng-model='a23[2]'/>
+					<input type="text" ng-model='a23[3]'/>
+					<input type="text" ng-model='a23[4]'/>
+					<input type="text" ng-model='a23[5]'/>
+					<input type="text" ng-model='a23[6]'/>
+					<input type="text" ng-model='a23[7]'/>
+					<input type="text" ng-model='a23[8]'/>
+					<input type="text" ng-model='a23[9]'/>
+					<input type="text" ng-model='a23[10]'/>
+					<input type="text" ng-model='a23[11]'/>
+					<input type="text" ng-model='a23[12]'/>
+					<input type="text" ng-model='a23[13]'/>
+					<input type="text" ng-model='a23[14]'/>
+					<input type="text" ng-model='a23[15]'/>
+					<input type="text" ng-model='a23[16]'/>
+					<input type="text" ng-model='a23[17]'/>
+					<input type="text" ng-model='a23[18]'/>
+					<input type="text" ng-model='a23[19]'/>
+					<input type="text" ng-model='a23[20]'/>
+					<input type="text" ng-model='a23[21]'/>
+					<input type="text" ng-model='a23[22]'/>
+					<input type="text" ng-model='a23[23]'/>
+					<input type="text" ng-model='a23[24]'/>
+					<input type="text" ng-model='a23[25]'/>
+					<input type="text" ng-model='a23[26]'/>
+					<input type="text" ng-model='a23[27]'/>
+					<input type="text" ng-model='a23[28]'/>
+					<input type="text" ng-model='a23[29]'/>
+				</td>
+				<td class="red">总和:{{s23}}</td>
+			</tr>
+			<tr><th colspan="2">24</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a24[0]'/>
+					<input type="text" ng-model='a24[1]'/>
+					<input type="text" ng-model='a24[2]'/>
+					<input type="text" ng-model='a24[3]'/>
+					<input type="text" ng-model='a24[4]'/>
+					<input type="text" ng-model='a24[5]'/>
+					<input type="text" ng-model='a24[6]'/>
+					<input type="text" ng-model='a24[7]'/>
+					<input type="text" ng-model='a24[8]'/>
+					<input type="text" ng-model='a24[9]'/>
+					<input type="text" ng-model='a24[10]'/>
+					<input type="text" ng-model='a24[11]'/>
+					<input type="text" ng-model='a24[12]'/>
+					<input type="text" ng-model='a24[13]'/>
+					<input type="text" ng-model='a24[14]'/>
+					<input type="text" ng-model='a24[15]'/>
+					<input type="text" ng-model='a24[16]'/>
+					<input type="text" ng-model='a24[17]'/>
+					<input type="text" ng-model='a24[18]'/>
+					<input type="text" ng-model='a24[19]'/>
+					<input type="text" ng-model='a24[20]'/>
+					<input type="text" ng-model='a24[21]'/>
+					<input type="text" ng-model='a24[22]'/>
+					<input type="text" ng-model='a24[23]'/>
+					<input type="text" ng-model='a24[24]'/>
+					<input type="text" ng-model='a24[25]'/>
+					<input type="text" ng-model='a24[26]'/>
+					<input type="text" ng-model='a24[27]'/>
+					<input type="text" ng-model='a24[28]'/>
+					<input type="text" ng-model='a24[29]'/>
+				</td>
+				<td class="red">总和:{{s24}}</td>
+			</tr>
+			<tr><th colspan="2">25</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a25[0]'/>
+					<input type="text" ng-model='a25[1]'/>
+					<input type="text" ng-model='a25[2]'/>
+					<input type="text" ng-model='a25[3]'/>
+					<input type="text" ng-model='a25[4]'/>
+					<input type="text" ng-model='a25[5]'/>
+					<input type="text" ng-model='a25[6]'/>
+					<input type="text" ng-model='a25[7]'/>
+					<input type="text" ng-model='a25[8]'/>
+					<input type="text" ng-model='a25[9]'/>
+					<input type="text" ng-model='a25[10]'/>
+					<input type="text" ng-model='a25[11]'/>
+					<input type="text" ng-model='a25[12]'/>
+					<input type="text" ng-model='a25[13]'/>
+					<input type="text" ng-model='a25[14]'/>
+					<input type="text" ng-model='a25[15]'/>
+					<input type="text" ng-model='a25[16]'/>
+					<input type="text" ng-model='a25[17]'/>
+					<input type="text" ng-model='a25[18]'/>
+					<input type="text" ng-model='a25[19]'/>
+					<input type="text" ng-model='a25[20]'/>
+					<input type="text" ng-model='a25[21]'/>
+					<input type="text" ng-model='a25[22]'/>
+					<input type="text" ng-model='a25[23]'/>
+					<input type="text" ng-model='a25[24]'/>
+					<input type="text" ng-model='a25[25]'/>
+					<input type="text" ng-model='a25[26]'/>
+					<input type="text" ng-model='a25[27]'/>
+					<input type="text" ng-model='a25[28]'/>
+					<input type="text" ng-model='a25[29]'/>
+				</td>
+				<td class="red">总和:{{s25}}</td>
+			</tr>
+			<tr><th colspan="2">26</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a26[0]'/>
+					<input type="text" ng-model='a26[1]'/>
+					<input type="text" ng-model='a26[2]'/>
+					<input type="text" ng-model='a26[3]'/>
+					<input type="text" ng-model='a26[4]'/>
+					<input type="text" ng-model='a26[5]'/>
+					<input type="text" ng-model='a26[6]'/>
+					<input type="text" ng-model='a26[7]'/>
+					<input type="text" ng-model='a26[8]'/>
+					<input type="text" ng-model='a26[9]'/>
+					<input type="text" ng-model='a26[10]'/>
+					<input type="text" ng-model='a26[11]'/>
+					<input type="text" ng-model='a26[12]'/>
+					<input type="text" ng-model='a26[13]'/>
+					<input type="text" ng-model='a26[14]'/>
+					<input type="text" ng-model='a26[15]'/>
+					<input type="text" ng-model='a26[16]'/>
+					<input type="text" ng-model='a26[17]'/>
+					<input type="text" ng-model='a26[18]'/>
+					<input type="text" ng-model='a26[19]'/>
+					<input type="text" ng-model='a26[20]'/>
+					<input type="text" ng-model='a26[21]'/>
+					<input type="text" ng-model='a26[22]'/>
+					<input type="text" ng-model='a26[23]'/>
+					<input type="text" ng-model='a26[24]'/>
+					<input type="text" ng-model='a26[25]'/>
+					<input type="text" ng-model='a26[26]'/>
+					<input type="text" ng-model='a26[27]'/>
+					<input type="text" ng-model='a26[28]'/>
+					<input type="text" ng-model='a26[29]'/>
+				</td>
+				<td class="red">总和:{{s26}}</td>
+			</tr>
+			<tr><th colspan="2">27</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a27[0]'/>
+					<input type="text" ng-model='a27[1]'/>
+					<input type="text" ng-model='a27[2]'/>
+					<input type="text" ng-model='a27[3]'/>
+					<input type="text" ng-model='a27[4]'/>
+					<input type="text" ng-model='a27[5]'/>
+					<input type="text" ng-model='a27[6]'/>
+					<input type="text" ng-model='a27[7]'/>
+					<input type="text" ng-model='a27[8]'/>
+					<input type="text" ng-model='a27[9]'/>
+					<input type="text" ng-model='a27[10]'/>
+					<input type="text" ng-model='a27[11]'/>
+					<input type="text" ng-model='a27[12]'/>
+					<input type="text" ng-model='a27[13]'/>
+					<input type="text" ng-model='a27[14]'/>
+					<input type="text" ng-model='a27[15]'/>
+					<input type="text" ng-model='a27[16]'/>
+					<input type="text" ng-model='a27[17]'/>
+					<input type="text" ng-model='a27[18]'/>
+					<input type="text" ng-model='a27[19]'/>
+					<input type="text" ng-model='a27[20]'/>
+					<input type="text" ng-model='a27[21]'/>
+					<input type="text" ng-model='a27[22]'/>
+					<input type="text" ng-model='a27[23]'/>
+					<input type="text" ng-model='a27[24]'/>
+					<input type="text" ng-model='a27[25]'/>
+					<input type="text" ng-model='a27[26]'/>
+					<input type="text" ng-model='a27[27]'/>
+					<input type="text" ng-model='a27[28]'/>
+					<input type="text" ng-model='a27[29]'/>
+				</td>
+				<td class="red">总和:{{s27}}</td>
+			</tr>
+			<tr><th colspan="2">28</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a28[0]'/>
+					<input type="text" ng-model='a28[1]'/>
+					<input type="text" ng-model='a28[2]'/>
+					<input type="text" ng-model='a28[3]'/>
+					<input type="text" ng-model='a28[4]'/>
+					<input type="text" ng-model='a28[5]'/>
+					<input type="text" ng-model='a28[6]'/>
+					<input type="text" ng-model='a28[7]'/>
+					<input type="text" ng-model='a28[8]'/>
+					<input type="text" ng-model='a28[9]'/>
+					<input type="text" ng-model='a28[10]'/>
+					<input type="text" ng-model='a28[11]'/>
+					<input type="text" ng-model='a28[12]'/>
+					<input type="text" ng-model='a28[13]'/>
+					<input type="text" ng-model='a28[14]'/>
+					<input type="text" ng-model='a28[15]'/>
+					<input type="text" ng-model='a28[16]'/>
+					<input type="text" ng-model='a28[17]'/>
+					<input type="text" ng-model='a28[18]'/>
+					<input type="text" ng-model='a28[19]'/>
+					<input type="text" ng-model='a28[20]'/>
+					<input type="text" ng-model='a28[21]'/>
+					<input type="text" ng-model='a28[22]'/>
+					<input type="text" ng-model='a28[23]'/>
+					<input type="text" ng-model='a28[24]'/>
+					<input type="text" ng-model='a28[25]'/>
+					<input type="text" ng-model='a28[26]'/>
+					<input type="text" ng-model='a28[27]'/>
+					<input type="text" ng-model='a28[28]'/>
+					<input type="text" ng-model='a28[29]'/>
+				</td>
+				<td class="red">总和:{{s28}}</td>
+			</tr>
+			<tr><th colspan="2">29</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a29[0]'/>
+					<input type="text" ng-model='a29[1]'/>
+					<input type="text" ng-model='a29[2]'/>
+					<input type="text" ng-model='a29[3]'/>
+					<input type="text" ng-model='a29[4]'/>
+					<input type="text" ng-model='a29[5]'/>
+					<input type="text" ng-model='a29[6]'/>
+					<input type="text" ng-model='a29[7]'/>
+					<input type="text" ng-model='a29[8]'/>
+					<input type="text" ng-model='a29[9]'/>
+					<input type="text" ng-model='a29[10]'/>
+					<input type="text" ng-model='a29[11]'/>
+					<input type="text" ng-model='a29[12]'/>
+					<input type="text" ng-model='a29[13]'/>
+					<input type="text" ng-model='a29[14]'/>
+					<input type="text" ng-model='a29[15]'/>
+					<input type="text" ng-model='a29[16]'/>
+					<input type="text" ng-model='a29[17]'/>
+					<input type="text" ng-model='a29[18]'/>
+					<input type="text" ng-model='a29[19]'/>
+					<input type="text" ng-model='a29[20]'/>
+					<input type="text" ng-model='a29[21]'/>
+					<input type="text" ng-model='a29[22]'/>
+					<input type="text" ng-model='a29[23]'/>
+					<input type="text" ng-model='a29[24]'/>
+					<input type="text" ng-model='a29[25]'/>
+					<input type="text" ng-model='a29[26]'/>
+					<input type="text" ng-model='a29[27]'/>
+					<input type="text" ng-model='a29[28]'/>
+					<input type="text" ng-model='a29[29]'/>
+				</td>
+				<td class="red">总和:{{s29}}</td>
+			</tr>
+			<tr><th colspan="2">30</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a30[0]'/>
+					<input type="text" ng-model='a30[1]'/>
+					<input type="text" ng-model='a30[2]'/>
+					<input type="text" ng-model='a30[3]'/>
+					<input type="text" ng-model='a30[4]'/>
+					<input type="text" ng-model='a30[5]'/>
+					<input type="text" ng-model='a30[6]'/>
+					<input type="text" ng-model='a30[7]'/>
+					<input type="text" ng-model='a30[8]'/>
+					<input type="text" ng-model='a30[9]'/>
+					<input type="text" ng-model='a30[10]'/>
+					<input type="text" ng-model='a30[11]'/>
+					<input type="text" ng-model='a30[12]'/>
+					<input type="text" ng-model='a30[13]'/>
+					<input type="text" ng-model='a30[14]'/>
+					<input type="text" ng-model='a30[15]'/>
+					<input type="text" ng-model='a30[16]'/>
+					<input type="text" ng-model='a30[17]'/>
+					<input type="text" ng-model='a30[18]'/>
+					<input type="text" ng-model='a30[19]'/>
+					<input type="text" ng-model='a30[20]'/>
+					<input type="text" ng-model='a30[21]'/>
+					<input type="text" ng-model='a30[22]'/>
+					<input type="text" ng-model='a30[23]'/>
+					<input type="text" ng-model='a30[24]'/>
+					<input type="text" ng-model='a30[25]'/>
+					<input type="text" ng-model='a30[26]'/>
+					<input type="text" ng-model='a30[27]'/>
+					<input type="text" ng-model='a30[28]'/>
+					<input type="text" ng-model='a30[29]'/>
+				</td>
+				<td class="red">总和:{{s30}}</td>
+			</tr>
+			<tr><th colspan="2">31</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a31[0]'/>
+					<input type="text" ng-model='a31[1]'/>
+					<input type="text" ng-model='a31[2]'/>
+					<input type="text" ng-model='a31[3]'/>
+					<input type="text" ng-model='a31[4]'/>
+					<input type="text" ng-model='a31[5]'/>
+					<input type="text" ng-model='a31[6]'/>
+					<input type="text" ng-model='a31[7]'/>
+					<input type="text" ng-model='a31[8]'/>
+					<input type="text" ng-model='a31[9]'/>
+					<input type="text" ng-model='a31[10]'/>
+					<input type="text" ng-model='a31[11]'/>
+					<input type="text" ng-model='a31[12]'/>
+					<input type="text" ng-model='a31[13]'/>
+					<input type="text" ng-model='a31[14]'/>
+					<input type="text" ng-model='a31[15]'/>
+					<input type="text" ng-model='a31[16]'/>
+					<input type="text" ng-model='a31[17]'/>
+					<input type="text" ng-model='a31[18]'/>
+					<input type="text" ng-model='a31[19]'/>
+					<input type="text" ng-model='a31[20]'/>
+					<input type="text" ng-model='a31[21]'/>
+					<input type="text" ng-model='a31[22]'/>
+					<input type="text" ng-model='a31[23]'/>
+					<input type="text" ng-model='a31[24]'/>
+					<input type="text" ng-model='a31[25]'/>
+					<input type="text" ng-model='a31[26]'/>
+					<input type="text" ng-model='a31[27]'/>
+					<input type="text" ng-model='a31[28]'/>
+					<input type="text" ng-model='a31[29]'/>
+				</td>
+				<td class="red">总和:{{s31}}</td>
+			</tr>
+			<tr><th colspan="2">32</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a32[0]'/>
+					<input type="text" ng-model='a32[1]'/>
+					<input type="text" ng-model='a32[2]'/>
+					<input type="text" ng-model='a32[3]'/>
+					<input type="text" ng-model='a32[4]'/>
+					<input type="text" ng-model='a32[5]'/>
+					<input type="text" ng-model='a32[6]'/>
+					<input type="text" ng-model='a32[7]'/>
+					<input type="text" ng-model='a32[8]'/>
+					<input type="text" ng-model='a32[9]'/>
+					<input type="text" ng-model='a32[10]'/>
+					<input type="text" ng-model='a32[11]'/>
+					<input type="text" ng-model='a32[12]'/>
+					<input type="text" ng-model='a32[13]'/>
+					<input type="text" ng-model='a32[14]'/>
+					<input type="text" ng-model='a32[15]'/>
+					<input type="text" ng-model='a32[16]'/>
+					<input type="text" ng-model='a32[17]'/>
+					<input type="text" ng-model='a32[18]'/>
+					<input type="text" ng-model='a32[19]'/>
+					<input type="text" ng-model='a32[20]'/>
+					<input type="text" ng-model='a32[21]'/>
+					<input type="text" ng-model='a32[22]'/>
+					<input type="text" ng-model='a32[23]'/>
+					<input type="text" ng-model='a32[24]'/>
+					<input type="text" ng-model='a32[25]'/>
+					<input type="text" ng-model='a32[26]'/>
+					<input type="text" ng-model='a32[27]'/>
+					<input type="text" ng-model='a32[28]'/>
+					<input type="text" ng-model='a32[29]'/>
+				</td>
+				<td class="red">总和:{{s32}}</td>
+			</tr>
+			<tr><th colspan="2">33</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a33[0]'/>
+					<input type="text" ng-model='a33[1]'/>
+					<input type="text" ng-model='a33[2]'/>
+					<input type="text" ng-model='a33[3]'/>
+					<input type="text" ng-model='a33[4]'/>
+					<input type="text" ng-model='a33[5]'/>
+					<input type="text" ng-model='a33[6]'/>
+					<input type="text" ng-model='a33[7]'/>
+					<input type="text" ng-model='a33[8]'/>
+					<input type="text" ng-model='a33[9]'/>
+					<input type="text" ng-model='a33[10]'/>
+					<input type="text" ng-model='a33[11]'/>
+					<input type="text" ng-model='a33[12]'/>
+					<input type="text" ng-model='a33[13]'/>
+					<input type="text" ng-model='a33[14]'/>
+					<input type="text" ng-model='a33[15]'/>
+					<input type="text" ng-model='a33[16]'/>
+					<input type="text" ng-model='a33[17]'/>
+					<input type="text" ng-model='a33[18]'/>
+					<input type="text" ng-model='a33[19]'/>
+					<input type="text" ng-model='a33[20]'/>
+					<input type="text" ng-model='a33[21]'/>
+					<input type="text" ng-model='a33[22]'/>
+					<input type="text" ng-model='a33[23]'/>
+					<input type="text" ng-model='a33[24]'/>
+					<input type="text" ng-model='a33[25]'/>
+					<input type="text" ng-model='a33[26]'/>
+					<input type="text" ng-model='a33[27]'/>
+					<input type="text" ng-model='a33[28]'/>
+					<input type="text" ng-model='a33[29]'/>
+				</td>
+				<td class="red">总和:{{s33}}</td>
+			</tr>
+			<tr><th colspan="2">34</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a34[0]'/>
+					<input type="text" ng-model='a34[1]'/>
+					<input type="text" ng-model='a34[2]'/>
+					<input type="text" ng-model='a34[3]'/>
+					<input type="text" ng-model='a34[4]'/>
+					<input type="text" ng-model='a34[5]'/>
+					<input type="text" ng-model='a34[6]'/>
+					<input type="text" ng-model='a34[7]'/>
+					<input type="text" ng-model='a34[8]'/>
+					<input type="text" ng-model='a34[9]'/>
+					<input type="text" ng-model='a34[10]'/>
+					<input type="text" ng-model='a34[11]'/>
+					<input type="text" ng-model='a34[12]'/>
+					<input type="text" ng-model='a34[13]'/>
+					<input type="text" ng-model='a34[14]'/>
+					<input type="text" ng-model='a34[15]'/>
+					<input type="text" ng-model='a34[16]'/>
+					<input type="text" ng-model='a34[17]'/>
+					<input type="text" ng-model='a34[18]'/>
+					<input type="text" ng-model='a34[19]'/>
+					<input type="text" ng-model='a34[20]'/>
+					<input type="text" ng-model='a34[21]'/>
+					<input type="text" ng-model='a34[22]'/>
+					<input type="text" ng-model='a34[23]'/>
+					<input type="text" ng-model='a34[24]'/>
+					<input type="text" ng-model='a34[25]'/>
+					<input type="text" ng-model='a34[26]'/>
+					<input type="text" ng-model='a34[27]'/>
+					<input type="text" ng-model='a34[28]'/>
+					<input type="text" ng-model='a34[29]'/>
+				</td>
+				<td class="red">总和:{{s34}}</td>
+			</tr>
+			<tr><th colspan="2">35</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a35[0]'/>
+					<input type="text" ng-model='a35[1]'/>
+					<input type="text" ng-model='a35[2]'/>
+					<input type="text" ng-model='a35[3]'/>
+					<input type="text" ng-model='a35[4]'/>
+					<input type="text" ng-model='a35[5]'/>
+					<input type="text" ng-model='a35[6]'/>
+					<input type="text" ng-model='a35[7]'/>
+					<input type="text" ng-model='a35[8]'/>
+					<input type="text" ng-model='a35[9]'/>
+					<input type="text" ng-model='a35[10]'/>
+					<input type="text" ng-model='a35[11]'/>
+					<input type="text" ng-model='a35[12]'/>
+					<input type="text" ng-model='a35[13]'/>
+					<input type="text" ng-model='a35[14]'/>
+					<input type="text" ng-model='a35[15]'/>
+					<input type="text" ng-model='a35[16]'/>
+					<input type="text" ng-model='a35[17]'/>
+					<input type="text" ng-model='a35[18]'/>
+					<input type="text" ng-model='a35[19]'/>
+					<input type="text" ng-model='a35[20]'/>
+					<input type="text" ng-model='a35[21]'/>
+					<input type="text" ng-model='a35[22]'/>
+					<input type="text" ng-model='a35[23]'/>
+					<input type="text" ng-model='a35[24]'/>
+					<input type="text" ng-model='a35[25]'/>
+					<input type="text" ng-model='a35[26]'/>
+					<input type="text" ng-model='a35[27]'/>
+					<input type="text" ng-model='a35[28]'/>
+					<input type="text" ng-model='a35[29]'/>
+				</td>
+				<td class="red">总和:{{s35}}</td>
+			</tr>
+			<tr><th colspan="2">36</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a36[0]'/>
+					<input type="text" ng-model='a36[1]'/>
+					<input type="text" ng-model='a36[2]'/>
+					<input type="text" ng-model='a36[3]'/>
+					<input type="text" ng-model='a36[4]'/>
+					<input type="text" ng-model='a36[5]'/>
+					<input type="text" ng-model='a36[6]'/>
+					<input type="text" ng-model='a36[7]'/>
+					<input type="text" ng-model='a36[8]'/>
+					<input type="text" ng-model='a36[9]'/>
+					<input type="text" ng-model='a36[10]'/>
+					<input type="text" ng-model='a36[11]'/>
+					<input type="text" ng-model='a36[12]'/>
+					<input type="text" ng-model='a36[13]'/>
+					<input type="text" ng-model='a36[14]'/>
+					<input type="text" ng-model='a36[15]'/>
+					<input type="text" ng-model='a36[16]'/>
+					<input type="text" ng-model='a36[17]'/>
+					<input type="text" ng-model='a36[18]'/>
+					<input type="text" ng-model='a36[19]'/>
+					<input type="text" ng-model='a36[20]'/>
+					<input type="text" ng-model='a36[21]'/>
+					<input type="text" ng-model='a36[22]'/>
+					<input type="text" ng-model='a36[23]'/>
+					<input type="text" ng-model='a36[24]'/>
+					<input type="text" ng-model='a36[25]'/>
+					<input type="text" ng-model='a36[26]'/>
+					<input type="text" ng-model='a36[27]'/>
+					<input type="text" ng-model='a36[28]'/>
+					<input type="text" ng-model='a36[29]'/>
+				</td>
+				<td class="red">总和:{{s36}}</td>
+			</tr>
+			<tr><th colspan="2">37</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a37[0]'/>
+					<input type="text" ng-model='a37[1]'/>
+					<input type="text" ng-model='a37[2]'/>
+					<input type="text" ng-model='a37[3]'/>
+					<input type="text" ng-model='a37[4]'/>
+					<input type="text" ng-model='a37[5]'/>
+					<input type="text" ng-model='a37[6]'/>
+					<input type="text" ng-model='a37[7]'/>
+					<input type="text" ng-model='a37[8]'/>
+					<input type="text" ng-model='a37[9]'/>
+					<input type="text" ng-model='a37[10]'/>
+					<input type="text" ng-model='a37[11]'/>
+					<input type="text" ng-model='a37[12]'/>
+					<input type="text" ng-model='a37[13]'/>
+					<input type="text" ng-model='a37[14]'/>
+					<input type="text" ng-model='a37[15]'/>
+					<input type="text" ng-model='a37[16]'/>
+					<input type="text" ng-model='a37[17]'/>
+					<input type="text" ng-model='a37[18]'/>
+					<input type="text" ng-model='a37[19]'/>
+					<input type="text" ng-model='a37[20]'/>
+					<input type="text" ng-model='a37[21]'/>
+					<input type="text" ng-model='a37[22]'/>
+					<input type="text" ng-model='a37[23]'/>
+					<input type="text" ng-model='a37[24]'/>
+					<input type="text" ng-model='a37[25]'/>
+					<input type="text" ng-model='a37[26]'/>
+					<input type="text" ng-model='a37[27]'/>
+					<input type="text" ng-model='a37[28]'/>
+					<input type="text" ng-model='a37[29]'/>
+				</td>
+				<td class="red">总和:{{s37}}</td>
+			</tr>
+			<tr><th colspan="2">38</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a38[0]'/>
+					<input type="text" ng-model='a38[1]'/>
+					<input type="text" ng-model='a38[2]'/>
+					<input type="text" ng-model='a38[3]'/>
+					<input type="text" ng-model='a38[4]'/>
+					<input type="text" ng-model='a38[5]'/>
+					<input type="text" ng-model='a38[6]'/>
+					<input type="text" ng-model='a38[7]'/>
+					<input type="text" ng-model='a38[8]'/>
+					<input type="text" ng-model='a38[9]'/>
+					<input type="text" ng-model='a38[10]'/>
+					<input type="text" ng-model='a38[11]'/>
+					<input type="text" ng-model='a38[12]'/>
+					<input type="text" ng-model='a38[13]'/>
+					<input type="text" ng-model='a38[14]'/>
+					<input type="text" ng-model='a38[15]'/>
+					<input type="text" ng-model='a38[16]'/>
+					<input type="text" ng-model='a38[17]'/>
+					<input type="text" ng-model='a38[18]'/>
+					<input type="text" ng-model='a38[19]'/>
+					<input type="text" ng-model='a38[20]'/>
+					<input type="text" ng-model='a38[21]'/>
+					<input type="text" ng-model='a38[22]'/>
+					<input type="text" ng-model='a38[23]'/>
+					<input type="text" ng-model='a38[24]'/>
+					<input type="text" ng-model='a38[25]'/>
+					<input type="text" ng-model='a38[26]'/>
+					<input type="text" ng-model='a38[27]'/>
+					<input type="text" ng-model='a38[28]'/>
+					<input type="text" ng-model='a38[29]'/>
+				</td>
+				<td class="red">总和:{{s38}}</td>
+			</tr>
+			<tr><th colspan="2">39</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a39[0]'/>
+					<input type="text" ng-model='a39[1]'/>
+					<input type="text" ng-model='a39[2]'/>
+					<input type="text" ng-model='a39[3]'/>
+					<input type="text" ng-model='a39[4]'/>
+					<input type="text" ng-model='a39[5]'/>
+					<input type="text" ng-model='a39[6]'/>
+					<input type="text" ng-model='a39[7]'/>
+					<input type="text" ng-model='a39[8]'/>
+					<input type="text" ng-model='a39[9]'/>
+					<input type="text" ng-model='a39[10]'/>
+					<input type="text" ng-model='a39[11]'/>
+					<input type="text" ng-model='a39[12]'/>
+					<input type="text" ng-model='a39[13]'/>
+					<input type="text" ng-model='a39[14]'/>
+					<input type="text" ng-model='a39[15]'/>
+					<input type="text" ng-model='a39[16]'/>
+					<input type="text" ng-model='a39[17]'/>
+					<input type="text" ng-model='a39[18]'/>
+					<input type="text" ng-model='a39[19]'/>
+					<input type="text" ng-model='a39[20]'/>
+					<input type="text" ng-model='a39[21]'/>
+					<input type="text" ng-model='a39[22]'/>
+					<input type="text" ng-model='a39[23]'/>
+					<input type="text" ng-model='a39[24]'/>
+					<input type="text" ng-model='a39[25]'/>
+					<input type="text" ng-model='a39[26]'/>
+					<input type="text" ng-model='a39[27]'/>
+					<input type="text" ng-model='a39[28]'/>
+					<input type="text" ng-model='a39[29]'/>
+				</td>
+				<td class="red">总和:{{s39}}</td>
+			</tr>
+			<tr><th colspan="2">40</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a40[0]'/>
+					<input type="text" ng-model='a40[1]'/>
+					<input type="text" ng-model='a40[2]'/>
+					<input type="text" ng-model='a40[3]'/>
+					<input type="text" ng-model='a40[4]'/>
+					<input type="text" ng-model='a40[5]'/>
+					<input type="text" ng-model='a40[6]'/>
+					<input type="text" ng-model='a40[7]'/>
+					<input type="text" ng-model='a40[8]'/>
+					<input type="text" ng-model='a40[9]'/>
+					<input type="text" ng-model='a40[10]'/>
+					<input type="text" ng-model='a40[11]'/>
+					<input type="text" ng-model='a40[12]'/>
+					<input type="text" ng-model='a40[13]'/>
+					<input type="text" ng-model='a40[14]'/>
+					<input type="text" ng-model='a40[15]'/>
+					<input type="text" ng-model='a40[16]'/>
+					<input type="text" ng-model='a40[17]'/>
+					<input type="text" ng-model='a40[18]'/>
+					<input type="text" ng-model='a40[19]'/>
+					<input type="text" ng-model='a40[20]'/>
+					<input type="text" ng-model='a40[21]'/>
+					<input type="text" ng-model='a40[22]'/>
+					<input type="text" ng-model='a40[23]'/>
+					<input type="text" ng-model='a40[24]'/>
+					<input type="text" ng-model='a40[25]'/>
+					<input type="text" ng-model='a40[26]'/>
+					<input type="text" ng-model='a40[27]'/>
+					<input type="text" ng-model='a40[28]'/>
+					<input type="text" ng-model='a40[29]'/>
+				</td>
+				<td class="red">总和:{{s40}}</td>
+			</tr>
+			<tr><th colspan="2">41</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a41[0]'/>
+					<input type="text" ng-model='a41[1]'/>
+					<input type="text" ng-model='a41[2]'/>
+					<input type="text" ng-model='a41[3]'/>
+					<input type="text" ng-model='a41[4]'/>
+					<input type="text" ng-model='a41[5]'/>
+					<input type="text" ng-model='a41[6]'/>
+					<input type="text" ng-model='a41[7]'/>
+					<input type="text" ng-model='a41[8]'/>
+					<input type="text" ng-model='a41[9]'/>
+					<input type="text" ng-model='a41[10]'/>
+					<input type="text" ng-model='a41[11]'/>
+					<input type="text" ng-model='a41[12]'/>
+					<input type="text" ng-model='a41[13]'/>
+					<input type="text" ng-model='a41[14]'/>
+					<input type="text" ng-model='a41[15]'/>
+					<input type="text" ng-model='a41[16]'/>
+					<input type="text" ng-model='a41[17]'/>
+					<input type="text" ng-model='a41[18]'/>
+					<input type="text" ng-model='a41[19]'/>
+					<input type="text" ng-model='a41[20]'/>
+					<input type="text" ng-model='a41[21]'/>
+					<input type="text" ng-model='a41[22]'/>
+					<input type="text" ng-model='a41[23]'/>
+					<input type="text" ng-model='a41[24]'/>
+					<input type="text" ng-model='a41[25]'/>
+					<input type="text" ng-model='a41[26]'/>
+					<input type="text" ng-model='a41[27]'/>
+					<input type="text" ng-model='a41[28]'/>
+					<input type="text" ng-model='a41[29]'/>
+				</td>
+				<td class="red">总和:{{s41}}</td>
+			</tr>
+			<tr><th colspan="2">42</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a42[0]'/>
+					<input type="text" ng-model='a42[1]'/>
+					<input type="text" ng-model='a42[2]'/>
+					<input type="text" ng-model='a42[3]'/>
+					<input type="text" ng-model='a42[4]'/>
+					<input type="text" ng-model='a42[5]'/>
+					<input type="text" ng-model='a42[6]'/>
+					<input type="text" ng-model='a42[7]'/>
+					<input type="text" ng-model='a42[8]'/>
+					<input type="text" ng-model='a42[9]'/>
+					<input type="text" ng-model='a42[10]'/>
+					<input type="text" ng-model='a42[11]'/>
+					<input type="text" ng-model='a42[12]'/>
+					<input type="text" ng-model='a42[13]'/>
+					<input type="text" ng-model='a42[14]'/>
+					<input type="text" ng-model='a42[15]'/>
+					<input type="text" ng-model='a42[16]'/>
+					<input type="text" ng-model='a42[17]'/>
+					<input type="text" ng-model='a42[18]'/>
+					<input type="text" ng-model='a42[19]'/>
+					<input type="text" ng-model='a42[20]'/>
+					<input type="text" ng-model='a42[21]'/>
+					<input type="text" ng-model='a42[22]'/>
+					<input type="text" ng-model='a42[23]'/>
+					<input type="text" ng-model='a42[24]'/>
+					<input type="text" ng-model='a42[25]'/>
+					<input type="text" ng-model='a42[26]'/>
+					<input type="text" ng-model='a42[27]'/>
+					<input type="text" ng-model='a42[28]'/>
+					<input type="text" ng-model='a42[29]'/>
+				</td>
+				<td class="red">总和:{{s42}}</td>
+			</tr>
+			<tr><th colspan="2">43</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a43[0]'/>
+					<input type="text" ng-model='a43[1]'/>
+					<input type="text" ng-model='a43[2]'/>
+					<input type="text" ng-model='a43[3]'/>
+					<input type="text" ng-model='a43[4]'/>
+					<input type="text" ng-model='a43[5]'/>
+					<input type="text" ng-model='a43[6]'/>
+					<input type="text" ng-model='a43[7]'/>
+					<input type="text" ng-model='a43[8]'/>
+					<input type="text" ng-model='a43[9]'/>
+					<input type="text" ng-model='a43[10]'/>
+					<input type="text" ng-model='a43[11]'/>
+					<input type="text" ng-model='a43[12]'/>
+					<input type="text" ng-model='a43[13]'/>
+					<input type="text" ng-model='a43[14]'/>
+					<input type="text" ng-model='a43[15]'/>
+					<input type="text" ng-model='a43[16]'/>
+					<input type="text" ng-model='a43[17]'/>
+					<input type="text" ng-model='a43[18]'/>
+					<input type="text" ng-model='a43[19]'/>
+					<input type="text" ng-model='a43[20]'/>
+					<input type="text" ng-model='a43[21]'/>
+					<input type="text" ng-model='a43[22]'/>
+					<input type="text" ng-model='a43[23]'/>
+					<input type="text" ng-model='a43[24]'/>
+					<input type="text" ng-model='a43[25]'/>
+					<input type="text" ng-model='a43[26]'/>
+					<input type="text" ng-model='a43[27]'/>
+					<input type="text" ng-model='a43[28]'/>
+					<input type="text" ng-model='a43[29]'/>
+				</td>
+				<td class="red">总和:{{s43}}</td>
+			</tr>
+			<tr><th colspan="2">44</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a44[0]'/>
+					<input type="text" ng-model='a44[1]'/>
+					<input type="text" ng-model='a44[2]'/>
+					<input type="text" ng-model='a44[3]'/>
+					<input type="text" ng-model='a44[4]'/>
+					<input type="text" ng-model='a44[5]'/>
+					<input type="text" ng-model='a44[6]'/>
+					<input type="text" ng-model='a44[7]'/>
+					<input type="text" ng-model='a44[8]'/>
+					<input type="text" ng-model='a44[9]'/>
+					<input type="text" ng-model='a44[10]'/>
+					<input type="text" ng-model='a44[11]'/>
+					<input type="text" ng-model='a44[12]'/>
+					<input type="text" ng-model='a44[13]'/>
+					<input type="text" ng-model='a44[14]'/>
+					<input type="text" ng-model='a44[15]'/>
+					<input type="text" ng-model='a44[16]'/>
+					<input type="text" ng-model='a44[17]'/>
+					<input type="text" ng-model='a44[18]'/>
+					<input type="text" ng-model='a44[19]'/>
+					<input type="text" ng-model='a44[20]'/>
+					<input type="text" ng-model='a44[21]'/>
+					<input type="text" ng-model='a44[22]'/>
+					<input type="text" ng-model='a44[23]'/>
+					<input type="text" ng-model='a44[24]'/>
+					<input type="text" ng-model='a44[25]'/>
+					<input type="text" ng-model='a44[26]'/>
+					<input type="text" ng-model='a44[27]'/>
+					<input type="text" ng-model='a44[28]'/>
+					<input type="text" ng-model='a44[29]'/>
+				</td>
+				<td class="red">总和:{{s44}}</td>
+			</tr>
+			<tr><th colspan="2">45</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a45[0]'/>
+					<input type="text" ng-model='a45[1]'/>
+					<input type="text" ng-model='a45[2]'/>
+					<input type="text" ng-model='a45[3]'/>
+					<input type="text" ng-model='a45[4]'/>
+					<input type="text" ng-model='a45[5]'/>
+					<input type="text" ng-model='a45[6]'/>
+					<input type="text" ng-model='a45[7]'/>
+					<input type="text" ng-model='a45[8]'/>
+					<input type="text" ng-model='a45[9]'/>
+					<input type="text" ng-model='a45[10]'/>
+					<input type="text" ng-model='a45[11]'/>
+					<input type="text" ng-model='a45[12]'/>
+					<input type="text" ng-model='a45[13]'/>
+					<input type="text" ng-model='a45[14]'/>
+					<input type="text" ng-model='a45[15]'/>
+					<input type="text" ng-model='a45[16]'/>
+					<input type="text" ng-model='a45[17]'/>
+					<input type="text" ng-model='a45[18]'/>
+					<input type="text" ng-model='a45[19]'/>
+					<input type="text" ng-model='a45[20]'/>
+					<input type="text" ng-model='a45[21]'/>
+					<input type="text" ng-model='a45[22]'/>
+					<input type="text" ng-model='a45[23]'/>
+					<input type="text" ng-model='a45[24]'/>
+					<input type="text" ng-model='a45[25]'/>
+					<input type="text" ng-model='a45[26]'/>
+					<input type="text" ng-model='a45[27]'/>
+					<input type="text" ng-model='a45[28]'/>
+					<input type="text" ng-model='a45[29]'/>
+				</td>
+				<td class="red">总和:{{s45}}</td>
+			</tr>
+			<tr><th colspan="2">46</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a46[0]'/>
+					<input type="text" ng-model='a46[1]'/>
+					<input type="text" ng-model='a46[2]'/>
+					<input type="text" ng-model='a46[3]'/>
+					<input type="text" ng-model='a46[4]'/>
+					<input type="text" ng-model='a46[5]'/>
+					<input type="text" ng-model='a46[6]'/>
+					<input type="text" ng-model='a46[7]'/>
+					<input type="text" ng-model='a46[8]'/>
+					<input type="text" ng-model='a46[9]'/>
+					<input type="text" ng-model='a46[10]'/>
+					<input type="text" ng-model='a46[11]'/>
+					<input type="text" ng-model='a46[12]'/>
+					<input type="text" ng-model='a46[13]'/>
+					<input type="text" ng-model='a46[14]'/>
+					<input type="text" ng-model='a46[15]'/>
+					<input type="text" ng-model='a46[16]'/>
+					<input type="text" ng-model='a46[17]'/>
+					<input type="text" ng-model='a46[18]'/>
+					<input type="text" ng-model='a46[19]'/>
+					<input type="text" ng-model='a46[20]'/>
+					<input type="text" ng-model='a46[21]'/>
+					<input type="text" ng-model='a46[22]'/>
+					<input type="text" ng-model='a46[23]'/>
+					<input type="text" ng-model='a46[24]'/>
+					<input type="text" ng-model='a46[25]'/>
+					<input type="text" ng-model='a46[26]'/>
+					<input type="text" ng-model='a46[27]'/>
+					<input type="text" ng-model='a46[28]'/>
+					<input type="text" ng-model='a46[29]'/>
+				</td>
+				<td class="red">总和:{{s46}}</td>
+			</tr>
+			<tr><th colspan="2">47</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a47[0]'/>
+					<input type="text" ng-model='a47[1]'/>
+					<input type="text" ng-model='a47[2]'/>
+					<input type="text" ng-model='a47[3]'/>
+					<input type="text" ng-model='a47[4]'/>
+					<input type="text" ng-model='a47[5]'/>
+					<input type="text" ng-model='a47[6]'/>
+					<input type="text" ng-model='a47[7]'/>
+					<input type="text" ng-model='a47[8]'/>
+					<input type="text" ng-model='a47[9]'/>
+					<input type="text" ng-model='a47[10]'/>
+					<input type="text" ng-model='a47[11]'/>
+					<input type="text" ng-model='a47[12]'/>
+					<input type="text" ng-model='a47[13]'/>
+					<input type="text" ng-model='a47[14]'/>
+					<input type="text" ng-model='a47[15]'/>
+					<input type="text" ng-model='a47[16]'/>
+					<input type="text" ng-model='a47[17]'/>
+					<input type="text" ng-model='a47[18]'/>
+					<input type="text" ng-model='a47[19]'/>
+					<input type="text" ng-model='a47[20]'/>
+					<input type="text" ng-model='a47[21]'/>
+					<input type="text" ng-model='a47[22]'/>
+					<input type="text" ng-model='a47[23]'/>
+					<input type="text" ng-model='a47[24]'/>
+					<input type="text" ng-model='a47[25]'/>
+					<input type="text" ng-model='a47[26]'/>
+					<input type="text" ng-model='a47[27]'/>
+					<input type="text" ng-model='a47[28]'/>
+					<input type="text" ng-model='a47[29]'/>
+				</td>
+				<td class="red">总和:{{s47}}</td>
+			</tr>
+			<tr><th colspan="2">48</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a48[0]'/>
+					<input type="text" ng-model='a48[1]'/>
+					<input type="text" ng-model='a48[2]'/>
+					<input type="text" ng-model='a48[3]'/>
+					<input type="text" ng-model='a48[4]'/>
+					<input type="text" ng-model='a48[5]'/>
+					<input type="text" ng-model='a48[6]'/>
+					<input type="text" ng-model='a48[7]'/>
+					<input type="text" ng-model='a48[8]'/>
+					<input type="text" ng-model='a48[9]'/>
+					<input type="text" ng-model='a48[10]'/>
+					<input type="text" ng-model='a48[11]'/>
+					<input type="text" ng-model='a48[12]'/>
+					<input type="text" ng-model='a48[13]'/>
+					<input type="text" ng-model='a48[14]'/>
+					<input type="text" ng-model='a48[15]'/>
+					<input type="text" ng-model='a48[16]'/>
+					<input type="text" ng-model='a48[17]'/>
+					<input type="text" ng-model='a48[18]'/>
+					<input type="text" ng-model='a48[19]'/>
+					<input type="text" ng-model='a48[20]'/>
+					<input type="text" ng-model='a48[21]'/>
+					<input type="text" ng-model='a48[22]'/>
+					<input type="text" ng-model='a48[23]'/>
+					<input type="text" ng-model='a48[24]'/>
+					<input type="text" ng-model='a48[25]'/>
+					<input type="text" ng-model='a48[26]'/>
+					<input type="text" ng-model='a48[27]'/>
+					<input type="text" ng-model='a48[28]'/>
+					<input type="text" ng-model='a48[29]'/>
+				</td>
+				<td class="red">总和:{{s48}}</td>
+			</tr>
+			<tr><th colspan="2">49</th></tr>
+			<tr>
+				<td>
+					<input type="text" ng-model='a49[0]'/>
+					<input type="text" ng-model='a49[1]'/>
+					<input type="text" ng-model='a49[2]'/>
+					<input type="text" ng-model='a49[3]'/>
+					<input type="text" ng-model='a49[4]'/>
+					<input type="text" ng-model='a49[5]'/>
+					<input type="text" ng-model='a49[6]'/>
+					<input type="text" ng-model='a49[7]'/>
+					<input type="text" ng-model='a49[8]'/>
+					<input type="text" ng-model='a49[9]'/>
+					<input type="text" ng-model='a49[10]'/>
+					<input type="text" ng-model='a49[11]'/>
+					<input type="text" ng-model='a49[12]'/>
+					<input type="text" ng-model='a49[13]'/>
+					<input type="text" ng-model='a49[14]'/>
+					<input type="text" ng-model='a49[15]'/>
+					<input type="text" ng-model='a49[16]'/>
+					<input type="text" ng-model='a49[17]'/>
+					<input type="text" ng-model='a49[18]'/>
+					<input type="text" ng-model='a49[19]'/>
+					<input type="text" ng-model='a49[20]'/>
+					<input type="text" ng-model='a49[21]'/>
+					<input type="text" ng-model='a49[22]'/>
+					<input type="text" ng-model='a49[23]'/>
+					<input type="text" ng-model='a49[24]'/>
+					<input type="text" ng-model='a49[25]'/>
+					<input type="text" ng-model='a49[26]'/>
+					<input type="text" ng-model='a49[27]'/>
+					<input type="text" ng-model='a49[28]'/>
+					<input type="text" ng-model='a49[29]'/>
+				</td>
+				<td class="red">总和:{{s49}}</td>
+			</tr>
+		</table>	
+		<div class="div2">
+			<button ng-click='go();'>计算</button><span class="red">最终结果：{{z=s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12+s13+s14+s15+s16+s17+s18+s19+s20+s21+s22+s23+s24+s25+s26+s27+s28+s29+s30+s31+s32+s33+s34+s5+s36+s37+s38+s39+s40+s41+s42+s43+s44+s45+s46+s47+s48+s49}}</span> 
+		</div>
+		
+		<script type="text/javascript">
+		var app=angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.a1=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a2=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a3=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a4=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a5=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a6=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a7=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a8=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a9=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a10=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a11=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a12=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a13=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a14=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a15=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a16=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a17=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a18=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a19=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a20=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a21=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a22=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a23=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a24=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a25=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a26=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a27=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a28=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a29=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a30=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a31=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a32=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a33=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a34=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a35=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a35=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a36=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a37=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a38=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a39=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a40=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a41=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a42=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a43=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a44=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a45=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a46=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a47=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a48=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.a49=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',];
+			$scope.go=function(){
+				$scope.s1=$scope.s2=$scope.s3=$scope.s4=$scope.s5=$scope.s6=$scope.s7=$scope.s8=$scope.s9=$scope.s10=$scope.s11=$scope.s12=$scope.s13=$scope.s14=$scope.s15=$scope.s16=$scope.s17=$scope.s18=$scope.s19=$scope.s20=$scope.s21=$scope.s22=$scope.s23=$scope.s24=$scope.s25=$scope.s26=$scope.s27=$scope.s28=$scope.s29=$scope.s30=$scope.s31=$scope.s32=$scope.s33=$scope.s34=$scope.s35=$scope.s36=$scope.s37=$scope.s38=$scope.s39=$scope.s40=$scope.s41=$scope.s42=$scope.s43=$scope.s44=$scope.s45=$scope.s46=$scope.s47=$scope.s48=$scope.s49=0;
+				for(var i=0;i<29;i++){$scope.s1+=Number($scope.a1[i]);$scope.s2+=Number($scope.a2[i]);$scope.s3+=Number($scope.a3[i]);$scope.s4+=Number($scope.a4[i]);$scope.s5+=Number($scope.a5[i]);$scope.s6+=Number($scope.a6[i]);$scope.s7+=Number($scope.a7[i]);$scope.s8+=Number($scope.a8[i]);$scope.s9+=Number($scope.a9[i]);$scope.s10+=Number($scope.a10[i]);$scope.s11+=Number($scope.a11[i]);$scope.s12+=Number($scope.a12[i]);$scope.s13+=Number($scope.a13[i]);$scope.s14+=Number($scope.a14[i]);$scope.s15+=Number($scope.a15[i]);$scope.s16+=Number($scope.a16[i]);$scope.s17+=Number($scope.a17[i]);$scope.s18+=Number($scope.a18[i]);$scope.s19+=Number($scope.a19[i]);$scope.s20+=Number($scope.a20[i]);$scope.s21+=Number($scope.a21[i]);$scope.s22+=Number($scope.a22[i]);$scope.s23+=Number($scope.a23[i]);$scope.s24+=Number($scope.a24[i]);$scope.s25+=Number($scope.a25[i]);$scope.s26+=Number($scope.a26[i]);$scope.s27+=Number($scope.a27[i]);$scope.s28+=Number($scope.a28[i]);$scope.s29+=Number($scope.a29[i]);$scope.s30+=Number($scope.a30[i]);$scope.s31+=Number($scope.a31[i]);$scope.s32+=Number($scope.a32[i]);$scope.s33+=Number($scope.a33[i]);$scope.s34+=Number($scope.a34[i]);$scope.s35+=Number($scope.a35[i]);$scope.s36+=Number($scope.a36[i]);$scope.s37+=Number($scope.a37[i]);$scope.s38+=Number($scope.a38[i]);$scope.s39+=Number($scope.a39[i]);$scope.s40+=Number($scope.a40[i]);$scope.s41+=Number($scope.a41[i]);$scope.s42+=Number($scope.a42[i]);$scope.s43+=Number($scope.a43[i]);$scope.s44+=Number($scope.a44[i]);$scope.s45+=Number($scope.a45[i]);$scope.s46+=Number($scope.a46[i]);$scope.s47+=Number($scope.a47[i]);$scope.s48+=Number($scope.a48[i]);$scope.s49+=Number($scope.a49[i]);
+			}
+			}
+		});
+		</script>
+	</body>
+</html>

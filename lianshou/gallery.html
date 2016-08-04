@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{font-family: helvetica,arial,serif;color: #333;background-color: #ccc;margin: 1em 10%;}
+			a{color: #c60;background-color: transparent;font-weight: bold;text-decoration: none;}
+			ul{padding: 0;}
+			li{float: left;padding: 1em;list-style: none;}
+			p{clear: both;}
+			#imageGallery{list-style: none;}
+			#imageGallery li{display: inline;}
+		</style>
+	</head>
+	<body>
+		<ul id="imageGallery">
+			<li><a href="img/1.jpg" title="img1">img1</a></li>
+			<li><a href="img/2.jpg" title="img2">img2</a></li>
+			<li><a href="img/3.jpg" title="img3">img3</a></li>
+			<li><a href="img/4.jpg" title="img4">img4</a></li>
+		</ul>		
+		
+		<script type="text/javascript">		
+			function insertAfter(newElement,targetElment){
+				var parent=targetElment.parentNode;
+				if(parent.lastChild==targetElment){
+					parent.appendChild(newElement);
+				}
+				else{
+					parent.insertBefore(newElement,targetElment.nextSibling);
+				}
+			}
+			function addLoadEvent(func){
+				var oldonload=window.onload;
+				if(typeof window.onload!='function'){
+					window.onload=func;
+				}else{
+					window.onload=function(){
+						oldonload();
+						func();
+					}
+				}
+			}
+			function showPic(whichpic){	
+				var des=document.getElementById('description');
+				var img_1=document.getElementById('placeholder');		
+				des.innerHTML=whichpic.getAttribute('title')
+				img_1.setAttribute('src',whichpic.getAttribute('href'));
+				return true;
+			}
+			function prepareGallery(){				
+				if(!document.getElementsByTagName){ return false;}
+				if(!document.getElementById){return false;} 
+				if(!document.getElementById('imageGallery')){return false;}
+				var gallery=document.getElementById('imageGallery');
+				var links=gallery.getElementsByTagName('a');				
+				for(var i=0;i<links.length;i++){
+					links[i].onclick=function(e){
+					return showPic(this)?false:true;							
+					}
+				}					
+			}
+			function preparePlaceholder(){
+				var gallery=document.getElementById('imageGallery');
+				var des=document.createElement('p');
+				des.setAttribute('id','description');
+				var des_txt=document.createTextNode('Choose an image');
+				des.appendChild(des_txt)
+				var img_1=document.createElement('img');				
+				img_1.setAttribute('id','placeholder');
+				img_1.setAttribute('src','img/t_bg.jpg');
+				insertAfter(img_1,gallery);
+				insertAfter(des,gallery);
+			}
+			addLoadEvent(prepareGallery);
+			addLoadEvent(preparePlaceholder);
+		</script>
+	</body>
+</html>

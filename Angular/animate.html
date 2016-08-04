@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>
+		<style>
+@keyframes myChange {
+    from {
+        height: 100px;
+    } to {
+        height: 0;
+    }
+}		
+div {
+  transition: all linear 0.5s;
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.ng-hide {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+div.ng-hide {
+    animation: 0.5s myChange;
+}
+
+</style>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<span></span>{{name}}
+		<h1>隐藏 DIV: <input type="checkbox" ng-model='myCheck' /></h1>
+		<div ng-hide="myCheck"></div>
+		<script type="text/javascript">
+			var app=angular.module('myApp',['ngAnimate']);
+			app.controller('myCtrl',function($scope){
+				$scope.name='Rechard';
+			});
+		</script>
+	</body>
+</html>

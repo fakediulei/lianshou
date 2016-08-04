@@ -1,0 +1,38 @@
+#about header{
+	background-image: url(../images/lineup.gif);
+}
+#photos header{
+	background-image: url(../images/basshead.gif);
+}
+#live header{
+	background-image: url(../images/bassist.gif);
+}
+#contact header{
+	background-image: url(../images/drummer.gif);
+}
+#slideshow{
+	width: 150px;
+	height: 150px;
+	position: relative;
+	overflow: hidden;
+}
+#preview{
+	position: absolute;
+	border-width: 0;
+	outline-width: 0;
+}
+#frame{
+	position: absolute;	
+	left: 0;
+	top: 0;
+	z-index: 99;border: 0;
+}
+#imagegallery li{display: inline;}
+td{padding: .5rem 3rem;}
+dl{overflow: hidden;}
+dt{float: left;}
+dd{float: left;}
+label{display: block;}
+fieldset{
+	border: 0;
+}

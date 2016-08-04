@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="u">
+		<title></title>
+		<script src="js/commonJavascript.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			abbr{color: red;}
+		</style>
+	</head>
+	<body>
+		<h1>What is the Document Object Model?</h1>
+		<p>
+			The <abbr title="World Wide Web Consortium">W3C</abbr> defines the <abbr title="Document Object Model">DOM</abbr> as:
+		</p>
+		<blockquote cite="http://www.w3.org/DOM/">
+		<p>
+			A platform and language-neutral interface that will allow programs and scripts to dynamically access and update the content,structure and style of documents.
+		</p>
+		</blockquote>
+		<p>
+			It is an <abbr title="Application Programming Interface">API</abbr> that can be used to navigate <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="eXtensible Markup Language">XML</abbr> documents.
+		</p>
+		<!--<dl>
+			<dt>W3C</dt>
+			<dd>World Wide Web Consortium</dd>
+			<dt>DOM</dt>
+			<dd>Document Object Model</dd>
+			<dt>API</dt>
+			<dd>Application Programming Interface</dd>
+			<dt>HTML</dt>
+			<dd>HyperText Markup Language</dd>
+			<dt>XML</dt>
+			<dd>eXtensible Markup Language</dd>
+		</dl>-->
+		<script type="text/javascript">
+			function displayAbbreviations(){
+				if(!document.getElementsByTagName||!document.createElement||!document.createTextNode){return false;}
+				//取得所有缩略词
+				var abbreviations = document.getElementsByTagName('abbr');
+				if(abbreviations.length<1) {return false;}
+				var defs = new Array();
+				//遍历这些缩略词
+				for(var i=0;i<abbreviations.length;i++){
+					var current_abbr=abbreviations[i];
+					var definition = current_abbr.getAttribute('title');
+					var key = current_abbr.lastChild.nodeValue;
+					defs[key]=definition;
+				}
+				//创建定义列表
+				var dlist = document.createElement('dl');
+				for(key in defs){
+					var definition = defs[key];
+					//定义标题
+					var dtitle = document.createElement('dt');
+					var dtitle_text = document.createTextNode(key);
+					dtitle.appendChild(dtitle_text);
+					var ddesc = document.createElement('dd');
+					var ddesc_text = document.createTextNode(definition);
+					ddesc.appendChild(ddesc_text);
+					//把它们添加到定义列表
+					dlist.appendChild(dtitle);
+					dlist.appendChild(ddesc);
+				}
+					//创建标题
+					var header = document.createElement('h2');
+					var header_text = document.createTextNode('Abbreviations');
+					header.appendChild(header_text);
+					//把标题和列表添加到body主体
+					document.body.appendChild(header);
+					document.body.appendChild(dlist);
+			}
+			function displayCitations(){
+				if(!document.getElementsByTagName||!document.createElement||!document.createTextNode){return false;}
+				//取得所有引用
+				var quotes = document.getElementsByTagName('blockquote');
+				//遍历引用
+					//如果没有cite属性，继续循环
+				for(var i=0;i<quotes.length;i++){
+					if(!quotes[i].getAttribute('cite')){ continue;}
+					//保存cite属性
+					var url = quotes[i].getAttribute('cite');
+					//区的引用中的所有元素节点
+					var quoteChildren = quotes[i].getElementsByTagName('*');
+					//如果没有元素节点，继续循环
+					if(quoteChildren.length<1){continue;} 
+					//取得引用中的最后一个元素节点
+					var elem = quoteChildren[quoteChildren.length-1];
+					//创建标记
+					var link = document.createElement('a');
+					var link_text = document.createTextNode('source');
+					link.appendChild(link_text);
+					link.setAttribute('href',url);
+					var superscript = document.createElement('sup');
+					superscript.appendChild(link);
+					//把标记添加到引用的最后一个元素节点
+					elem.appendChild(superscript);
+				}
+			}
+			addLoadEvent(displayAbbreviations);
+			addLoadEvent(displayCitations);
+		</script>
+	</body>
+</html>

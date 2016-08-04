@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <div id="content">
+        <div style="width: 100px;height: 100px;background: orange;" id="source">
+            <div id="touch-source" draggable="true" ondragstart="drag(event)">
+                <span class="title">景点</span>
+            </div>
+        </div>
+        <div style="width: 100px;height: 100px;background: #ec1611;" id="target" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>        
+    <script>
+    var target=document.getElementById('target');
+            function drag(ev){
+                ev.dataTransfer.setData("Text",ev.target.id);
+            };
+
+            function allowDrop(ev){
+                ev.preventDefault();
+                target.style.backgroundColor='#0F9AE0';
+            };
+            function drop(ev){
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+            };
+
+    </script>
+</body>	
+</html>

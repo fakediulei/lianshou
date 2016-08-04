@@ -1,0 +1,12 @@
+@import url(b.css);
+a {
+  color: #fff; }
+
+body {
+  font-size: 0.46875rem;
+  color: #fff; }
+
+a {
+  color: #08c; }
+  a:hover {
+    color: #333; }

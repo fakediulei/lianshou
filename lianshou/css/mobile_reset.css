@@ -1,0 +1,28 @@
+/*body set min-width and max-width*/
+
+body {
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	-webkit-overflow-scrolling:touch;/*fluent scroll ,works in ios*/
+}
+
+
+/*remove default backgroundColor of a and some other element*/
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*prevent a and img element's long touch callout,only works in ios*/
+
+a,
+img {
+	-webkit-touch-callout: none;
+}
