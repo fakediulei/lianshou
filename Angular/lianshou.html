@@ -5,7 +5,26 @@
 		<title></title>
 		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
-	<body>
+	<style type="text/css">
+
+	</style>
+	<body >
+		<div id="logger">
+			
+		</div>
+		<script type="text/javascript">
+		angular.module('ezstuff',[]).provider('ezHello',function(){
+			this.$get=function(){
+				return 'Hellow World';
+			}
+		});
+		angular.element(document).ready(function(){
+			angular.injector(['ng','ezstuff']).invoke(function(ezHello){
+				alert(ezHello);
+			});
+			
+		});
+		</script>
 	</body>
 </html>
  
