@@ -8,22 +8,19 @@
 	<style type="text/css">
 
 	</style>
-	<body >
-		<div id="logger">
-			
-		</div>
+	<body ng-app="ezstuff"  ng-init="aa='i am a sdfdsfds'" > 
+		Total sallary is {{aa | UperWord:false:'qq'}}
 		<script type="text/javascript">
-		angular.module('ezstuff',[]).provider('ezHello',function(){
-			this.$get=function(){
-				return 'Hellow World';
+			angular.module('ezstuff',[]).filter("UperWord",ezF);
+			function ezF(){
+				var filter=function(input,cap,aa){
+					if(!cap) {return input.toUpperCase();}					
+					return input.replace(/\b\w+\b/g,function(word){
+						return word.substring(0,1).toUpperCase()+word.substring(1)+aa;
+					});
+				}
+				return filter;
 			}
-		});
-		angular.element(document).ready(function(){
-			angular.injector(['ng','ezstuff']).invoke(function(ezHello){
-				alert(ezHello);
-			});
-			
-		});
 		</script>
 	</body>
 </html>
