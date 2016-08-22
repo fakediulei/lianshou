@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
+	<script src="./js/ionic.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/ionic.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app.css"/>
+</head>
+<body ng-app="ezApp" ng-controller="ezCtrl">
+<div class="bar bar-dark">
+	<h1 class="title title-left">微信</h1>
+	<button class="button button-clear icon ion-ios-search-strong btn_search"></button>
+	<button class="button button-clear icon ion-plus" on-tap="show_alert();"></button>	
+</div>
+	<ion-content class="has-header has-footer">
+			<ul class="list wei_xin_list">
+			<a class="item item-thumbnail-left" href="detail.html">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+			<a class="item item-thumbnail-left">
+				<img src="./img/venkman.jpg" alt="" />
+				<h2>科目四群</h2>
+				<p>[转账]您已确认收钱</p>
+			</a>
+		</ul>
+	</ion-content>
+	<div class="footer">
+		<div class="tabs tabs-stable tabs-icon-top">
+			<div class="tab-item active"><i class="icon ion-ios-chatbubble"></i>微信</div>
+			<div class="tab-item"><i class="icon ion-person-stalker"></i>通讯录</div>
+			<div class="tab-item"><i class="icon ion-android-compass"></i>发现</div>
+			<div class="tab-item"><i class="icon ion-person"></i>我</div>
+		</div>
+	</div>		
+<script type="text/javascript">
+		angular.module('ezApp',['ionic'])	
+		.controller('ezCtrl',function($scope,$ionicPopup){
+			$('.footer .tab-item').click(function(){
+				$('.footer .tab-item').removeClass('active');
+				$(this).addClass('active');
+			});
+			$scope.show_alert=function(){
+				$ionicPopup.alert({
+					title:'微信弹窗',
+					template:"功能开发中！"
+				});
+			};
+		});
+	</script>	
+	<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

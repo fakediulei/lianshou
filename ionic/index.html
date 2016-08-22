@@ -7,24 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/ionic.min.css">
 </head>
 <body ng-app="ezApp" ng-controller="ezCtrl">
-<ion-header-bar class="bar-positive">
-	<h1 class="title">on-double-tap</h1>
-</ion-header-bar>
-<ion-content padding="true" on-double-tap="show_alert();">
-	<p>
-		活动时间河南省打飞机的输入法打死你蝴蝶少女还是很难当上了还记得上了哈哈三得利哈哈你收多好
-	</p>
-</ion-content>
-	<script type="text/javascript">
-		angular.module('ezApp',['ionic'])
-		.controller('ezCtrl',function($scope,$ionicPopup){
-			$scope.show_alert=function(){
-				$ionicPopup.alert({
-					title:'点我点我',
-					template:"活动时间河南省打飞机的输入法打死你蝴蝶少女还是很难当上了还记得上了哈哈三得利哈哈你收多好"
-				});
-			};
+<div class="bar bar-header bar-calm"></div>
+<script type="text/javascript">
+		angular.module('ezApp',['ionic']).controller('ezCtrl',function($scope){
+
 		});
-	</script>
+</script>	
 </body>
 </html>
