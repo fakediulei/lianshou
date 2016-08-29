@@ -1,0 +1,61 @@
+@base_width:64rem;
+body{background-color: #f2f2f2; color: #f00; }
+.products_title{
+    height: 78/@base_width;
+    line-height: 78/@base_width;
+    font-size: 28/@base_width;
+    color: #333333;
+    padding: 0 20/@base_width;
+    margin: 0;
+}
+.products_list{
+    li{
+    background-color: #fff;
+    margin-bottom: 15/@base_width;}
+    .item{padding: 26/@base_width 20/@base_width;border-bottom: 1px solid #f2f2f2;overflow: hidden;
+            .img{display: inline-block; width: 100/@base_width;height: 100/@base_width;background-color: #f2f2f2;float: left;position: relative;
+                img{width:60/@base_width;height:60/@base_width;border: 0; position: absolute;top: 50%;left: 50%;
+                    margin-top: -30/@base_width;
+                    margin-left: -30/@base_width;
+                }
+        } 
+        .det{
+            float: left;
+            margin-left: 27/@base_width;
+            h2{
+                font-size: 26/@base_width;
+                color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+            }
+            p{
+                font-size: 24/@base_width;
+                width: 470/@base_width;
+                color: #999999;
+                margin-top: 15/@base_width;
+                line-height: 30/@base_width;
+            }
+        }      
+    }
+    .tags{
+            overflow: hidden;
+            background-color: #fff;   
+            padding-bottom: 12/@base_width;        
+            .tag{box-sizing: border-box; 
+                float: left;
+                width: 25%;
+                font-size: 28/@base_width;
+                border-right: 1px solid #f2f2f2;
+                &:last-child{
+                    border-right: 0;
+                }
+                span{
+                    display: block;
+                    white-space: nowrap;
+                    text-align: center;
+                    &.green{color: #3dcdc4;margin-top: 12/@base_width;}
+                    &.t_t{margin-top: 15/@base_width;color: #333; font-size: 24/@base_width;}
+                }
+                
+            }
+    }
+    
+}

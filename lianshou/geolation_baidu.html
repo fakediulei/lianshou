@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://api.map.baidu.com/api?ak=LNDpfw3eL9NTZuaDCNVTicKeyLCXEHAp&v=2.0&services=false"></script>		
+	</head>
+	<body>
+		<script type="text/javascript">
+			navigator.geolocation.getCurrentPosition(function (position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        var point = new BMap.Point(lon, lat);  // 创建坐标点
+        // 根据坐标得到地址描述
+        var myGeo = new BMap.Geocoder();
+        myGeo.getLocation(point, function (result) {
+            var city = result.addressComponents.city;
+            alert(city);
+        });
+    });
+		</script>
+	</body>
+</html>
