@@ -1,0 +1,135 @@
+body {
+  background-color: #f2f2f2;
+}
+.header {
+  height: 1.375rem;
+  line-height: 1.375rem;
+  background-color: #32cdc5;
+  color: #fff;
+  text-align: center;
+  font-size: 0.53125rem;
+  padding: 0 0.3125rem;
+  position: relative;
+}
+.header .back {
+  color: inherit;
+  text-decoration: none;
+  float: left;
+  padding-left: 0.5rem;
+  font-size: 0.375rem;
+  background: url(../images/icon_back.png) no-repeat left / 0.28125rem;
+  position: absolute;
+  left: 0.3125rem;
+}
+.items {
+  padding: 0 0.3125rem;
+  background-color: #fff;
+  font-size: 0.40625rem;
+  color: #333333;
+}
+.items li {
+  border-bottom: 1px solid #f2f2f2;
+  height: 1.34375rem;
+  line-height: 1.34375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.items li:last-child {
+  border-bottom: 0;
+}
+.items li.no_boderBottom {
+  border-bottom: 0;
+}
+.items li.divider {
+  height: 0.3125rem;
+  line-height: 0.3125rem;
+  background-color: #f2f2f2;
+  margin: -1px -0.3125rem;
+}
+.items li .right_part {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+  color: #999;
+}
+.items li .right_part input {
+  width: 100%;
+  color: inherit;
+  font-size: inherit;
+  text-align: right;
+  border: 0;
+  outline: 0;
+}
+.items li .right_part .dropdown {
+  padding-right: 0.46875rem;
+  background: url(../images/icon_arrowDown.png) no-repeat right / 0.3125rem;
+}
+.btn_block {
+  display: block;
+  margin: 0.53125rem auto;
+  width: 9.375rem;
+  border-radius: 0.046875rem;
+  color: #fff;
+  background-color: #32cdc5;
+  border: 0;
+  font-size: 0.4375rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+}
+.popWindow {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(128, 128, 128, 0.6);
+}
+.popWindow .dropDownWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4.84375rem;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  padding: 0 0.15625rem;
+}
+.popWindow .dropDownWrap .iscroll {
+  float: left;
+  width: 4.53125rem;
+  margin: 0 0.15625rem;
+  text-align: center;
+  font-size: 0.40625rem;
+  color: #333333;
+  overflow: hidden;
+  height: 4.84375rem;
+}
+.popWindow .dropDownWrap .iscroll li {
+  height: 1.03125rem;
+  line-height: 1.03125rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+.popWindow .dropDownWrap.oneCol .iscroll {
+  width: 9.375rem;
+}
+.successWrap .successState {
+  display: block;
+  width: 2.1875rem;
+  margin: 1.875rem auto 0.5625rem;
+}
+.successWrap p {
+  font-size: 0.4375rem;
+  color: #333;
+  text-align: center;
+}
+.successWrap p span {
+  margin-top: 0.421875rem;
+  display: inline-block;
+  color: #999;
+  font-size: 0.375rem;
+}

@@ -1,10 +1,8 @@
-.border(@color){border: 1px solid @color;}
-div{
-    .border(#0f0);
-    color: #f00;
-    font-size: 20px;
-    border-radius: 100%;
-    flex: 1;
-    appearance: none;  
-    box-sizing: border-box;
+.placeholder(@color) {
+  &::-moz-placeholder           { color: @color; } // Firefox
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+.ceshi{
+    .placeholder(#f00);
 }

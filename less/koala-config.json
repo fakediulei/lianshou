@@ -2,9 +2,9 @@
 {
 	// The mappings of source directory and output directory
 	"mappings": [
-		{	
-			"src": "less/",
-		"dest": "css/"
+		 {	
+		 	"src": "less",
+		 	"dest": "css"
 		 }
 	],
 
@@ -32,7 +32,7 @@
 		"sourceMap": false,
 
         // auto add vendor prefixes to rules
-        "autoprefix": true
+        "autoprefix": false
 	},
 
 	// Other compile options.
