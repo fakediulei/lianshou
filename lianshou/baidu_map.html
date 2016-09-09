@@ -16,7 +16,7 @@
 	<div id="r-result">
 	<form>
 		城市名: <input id="cityName" type="text" style="width:100px; margin-right:10px;" />
-		<input type="submit" value="查询" onclick="theLocation()" />
+		<input type="button" value="查询" onclick="theLocation()" />
 	</form>
 		
 	</div>
@@ -30,6 +30,7 @@
 
 	function theLocation(){
 		var city = document.getElementById("cityName").value;
+		console.log(city);
 		if(city != ""){
 			map.centerAndZoom(city,11);      // 用城市名设置地图中心点
 		}
