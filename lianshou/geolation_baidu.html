@@ -43,7 +43,7 @@ function showPosition(position)
 	map.addOverlay(marker);               // 将标注添加到地图中
 	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画   
 	var geoc = new BMap.Geocoder(); //创建一个地址解析器的实例
-	geoc.getLocation(point, function(rs){
+	geoc.getLocation(point, function(rs){//获取省份，城市，地区，街道
 			var addComp = rs.addressComponents;
 			alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
 		});   
