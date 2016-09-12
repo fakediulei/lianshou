@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>图片前台预览</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css"/>
+        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+	
+</style>
+    </head>
+    <body>
+		<input id="fi1" type="file" accept="images/*" /><br />
+		<img src="#" id="img1" style="width: 100px;"/>
+    </body>
+    <script type="text/javascript">
+    	$(function(){
+
+			function getObjectURL(file) {
+			var url = null ; 
+			if (window.createObjectURL!=undefined) { // basic
+			url = window.createObjectURL(file) ;
+			} else if (window.URL!=undefined) { // mozilla(firefox)
+			url = window.URL.createObjectURL(file) ;
+			} else if (window.webkitURL!=undefined) { // webkit or chrome
+			url = window.webkitURL.createObjectURL(file) ;
+			}
+			return url ;
+			}
+			$("#fi1").change(function(){
+			var objUrl;
+			if(navigator.userAgent.indexOf("MSIE")>0){
+			objUrl = this.value;
+			}else
+			objUrl = getObjectURL(this.files[0]);
+			console.log("objUrl = "+objUrl) ;
+			$('#img1').attr('src',objUrl);
+			}) ;
+    	});
+    </script>
+</html>
