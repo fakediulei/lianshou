@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Revealing Module Pattern</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var myModule = (function($,undefined){
+				var myVar1 = '',
+				myVar2 = '';
+				
+				var someFunction = function(){
+					return myVar1 + ' '+myVar2;
+				};
+				
+				return{
+					getMyVar1:function(){return myVar1},
+					setMyvar1:function(value){myVar1=value;},
+					someFunction:someFunction
+				}
+			})(jQuery);
+		</script>
+	</body>
+</html>
