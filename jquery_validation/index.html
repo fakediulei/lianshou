@@ -15,12 +15,20 @@
   <fieldset>
     <legend>验证完整的表单</legend>
     <p>
+    	<label for="chineseName">中文名</label>
+    	<input type="text" id="chineseName" name="chineseName" />
+    </p>
+    <p>
       <label for="firstname">名字</label>
       <input id="firstname" name="yiname" type="number">      
     </p>
     <p>
       <label for="lastname">姓氏</label>
       <input id="lastname" name="lastname" type="text">
+    </p>
+    <p>
+    	<label for="phone">手机号码</label>
+    	<input type="text" id="phone" name="phone" />
     </p>
     <p>
       <label for="username">用户名</label>
@@ -66,9 +74,24 @@
 </form>
 <script>
 $(document).ready(function() {
+	//添加自定义方法，验证手机号码
+		jQuery.validator.addMethod("isphone", function(value, element) {   
+    var tel =/^1[34578]\d{9}$/;
+    return this.optional(element) || (tel.test(value));
+}, "请输入正确的手机号");
+	//验证汉字
+	jQuery.validator.addMethod("isChinese", function(value, element) {  
+    var length = value.length;  
+    var regName = /[^\u4e00-\u9fa5]/g;  
+    return this.optional(element) || !regName.test( value );    
+}, "请输入中文名"); 
 // 在键盘按下并释放及提交后验证提交表单
  $("#signupForm").validate({
 	    rules: {
+	    	chineseName:{
+	    		required:true,
+	    		isChinese:true
+	    	},
 	      yiname:{
 	      	required:true,
 	      	range:[2000,12000]
@@ -95,10 +118,15 @@ $(document).ready(function() {
 	        required: "#newsletter:checked",
 	        minlength: 2
 	      },
-	      agree: "required"
+	      agree: "required",
+	      phone:{
+	      	required:true
+	      }
 	    },
 	    messages: {
-	    	required:"****必填",
+	    	phone:{
+	    		required:'请输入11位的手机号码'
+	    	},
 	      yiname: {	      	
 	      	range:'请输入2000-12000的金额'
 	      },
@@ -122,9 +150,9 @@ $(document).ready(function() {
 	    },
 	    submitHandler:function(){
 	    	alert("提交成功！");
-	    },
-	    onfocusout:true
+	    }
 	});
+
 	//去除输入框头尾的空格
 	$('input').blur(function(){		
 		$(this).val($.trim($(this).val()));

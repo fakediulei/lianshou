@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jquery Validation</title>
+		<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script src="//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+		<script src="validate_zw.js" type="text/javascript" charset="utf-8"></script><!--中文提示-->
+		<style type="text/css">		
+			.error{color: #f00;}/*错误提示的颜色*/
+		</style>
+	</head>
+	<body>
+<form class="cmxform" id="signupForm" method="get" action="">
+  <fieldset>
+    <legend>验证完整的表单</legend>
+    <p>
+    	<label for="phone">手机号码</label>
+    	<input type="text" id="phone" name="phone" />
+    </p>
+    <p>
+      <input class="submit" type="submit" value="提交">
+    </p>
+  </fieldset>
+</form>
+<script>
+$(document).ready(function() {
+ 
+	
+// 在键盘按下并释放及提交后验证提交表单
+ $("#signupForm").validate({
+	    rules: {
+	      phone:{
+	      	required:true,
+	      	isChar:"用户名只支持汉字"
+	      }
+	    },
+	    messages: {
+	    	phone:{
+	    		required:'请输入用户名'
+	    	}
+	    },
+	    submitHandler:function(){
+	    	alert("提交成功！");
+	    }
+	});
+
+	//去除输入框头尾的空格
+	$('input').blur(function(){		
+		$(this).val($.trim($(this).val()));
+	});
+});
+</script>
+
+	</body>
+</html>
