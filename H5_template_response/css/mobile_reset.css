@@ -1,0 +1,36 @@
+/*body set min-width and max-width*/
+
+body {
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	-webkit-overflow-scrolling:touch;/*fluent scroll ,works in ios*/
+	font-family: sans-serif;
+}
+
+
+/*remove default backgroundColor of a and some other element*/
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*prevent a and img element's long touch callout,only works in ios*/
+
+a,
+img {
+	-webkit-touch-callout: none;
+}
+ul,li,p,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;    
+}
+li{
+    list-style: none;}
+a{text-decoration: none;}
