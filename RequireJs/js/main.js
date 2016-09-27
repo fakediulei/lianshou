@@ -1,0 +1,13 @@
+requirejs.config({
+	baseUrl:'js/basic',
+	paths:{
+		jq3:'jquery.min',
+	},
+	shim:{
+		'jquery.validate.min':['jq3']
+	}
+});
+requirejs(['jquery.validate.min'],function(c1){
+	console.log('加载app完成!');
+	$("#commentForm").validate();
+});
